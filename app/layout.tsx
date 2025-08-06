@@ -32,20 +32,32 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="bg-white flex items-center justify-between px-6 py-4 shadow">
-          <Image
-            src={`/android-chrome-512x512.png`}
-            width={90}
-            alt="THUISA Logo"
-            height={90}
-          ></Image>
-          <div className="flex gap-7 text-black font-medium text-sm md:text-base">
-            <Link href={`/`} className="hover:bg-red-400 hover:cursor-pointer">Home</Link>
-            <Link href={`/about`}>About Us</Link>
-            <Link href={`/events`}>Our Events</Link>
-            <Link href={`/information`}>Informations</Link>
-            <Link href={`/resources`}>Resources</Link>
-            <Link href={`/support`}> Support</Link>
+        <div className="bg-white flex h-20 items-center justify-between px-10 shadow">
+          <Link href={`/`}>
+            <Image
+              src={`/logoThuisa.jpeg`}
+              width={70}
+              alt="THUISA Logo"
+              height={70}
+            ></Image>
+          </Link>
+          <div className="flex h-full items-center text-black font-medium text-sm md:text-base">
+            {[
+              { label: "Home", href: "/" },
+              { label: "About Us", href: "/about" },
+              { label: "Our Events", href: "/events" },
+              { label: "Informations", href: "/information" },
+              { label: "Resources", href: "/resources" },
+              { label: "Support", href: "/support" }
+            ].map((item, i) => (
+              <Link
+                key={i}
+                href={item.href}
+                className="h-full flex items-center px-5 hover:bg-gradient-to-r hover:text-gray-500 transition duration-300"
+              >
+                {item.label}
+              </Link>
+            ))}
           </div>
         </div>
         {children}
