@@ -32,11 +32,14 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div>
+        <div className="bg-red-600">
           <Image src={`/android-chrome-512x512.png`} width={90} alt="THUISA Logo" height={90}></Image>
           <Link href={`/`}>Home</Link>
-          <Link href={`/about`}>About</Link>
-          <Link href={`/contact`}>Contact Us</Link>
+          <Link href={`/about`}>About Us</Link>
+          <Link href={`/events`}>Our Events</Link>
+          <Link href={`/information`}>Informations</Link>
+          <Link href={`/resources`}>Resources</Link>
+          <Link href={`/support`}> Support</Link>
         </div>
         {children}
       </body>
