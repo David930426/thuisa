@@ -64,7 +64,7 @@ export default function RootLayout({
           {children}
         </body>
       </html>
-      <footer>&copy;THUISA 2025 team</footer>
+      <footer>by THUISA &copy;2025 team</footer>
     </>
   );
 }
