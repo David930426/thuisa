@@ -53,7 +53,7 @@ export default function RootLayout({
               <Link
                 key={i}
                 href={item.href}
-                className="h-full flex items-center px-5 hover:bg-gradient-to-r hover:text-gray-500 transition duration-300"
+                className="flex items-center px-5 hover:bg-gradient-to-r hover:text-gray-400 transition duration-300"
               >
                 {item.label}
               </Link>
