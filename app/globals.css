@@ -26,3 +26,22 @@ footer {
   background: black;
   color: white;
 }
+
+.swiper-pagination-bullet {
+  background-color: #919191 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #CCCCCC !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #636262 !important;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: #CCCCCC !important;
+  cursor: pointer;
+}

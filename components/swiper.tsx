@@ -8,7 +8,7 @@ import "swiper/css/pagination";
 
 export default function SwiperSection() {
   return (
-    <div className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] mt-1">
+    <div className="w-full mt-1">
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         spaceBetween={30}
@@ -20,7 +20,7 @@ export default function SwiperSection() {
       >
         <SwiperSlide>
           <div
-            className="bg-cover h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] bg-center flex items-center justify-center"
+            className="bg-cover h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] bg-center flex justify-center"
             style={{ backgroundImage: "url('/gatherThuisa.png')" }}
           >
             <h1 className="text-white text-4xl font-bold">Welcome to THUISA</h1>
