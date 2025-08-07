@@ -1,6 +1,9 @@
+import SwiperSection from "@/components/swiper";
 
 export default function Home() {
   return (
-    <>hello world</>
+    <>
+      <SwiperSection />
+    </>
   );
 }
