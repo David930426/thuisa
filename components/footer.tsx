@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-gray-400 py-6 mt-10">
-      <div className="max-w-4xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
         <div className="flex gap-10 md:gap-8 text-sm">
           <div className="flex flex-col md:flex-row gap-3 md:gap-8 mb-2">
             <Link href="/" className="hover:text-gray-700 transition">
@@ -33,7 +33,7 @@ export default function Footer() {
           </div>
         </div>
         <div>
-          <div className="flex flex-warp gap-4 mb-4 max-md:justify-center max-md:items-center">
+          <div className="flex flex-warp gap-4 mb-7 max-md:justify-center max-md:items-center">
             <Image
               src="/android-chrome-192x192.png"
               alt="thuisaLogo"
@@ -51,7 +51,7 @@ export default function Footer() {
               </div>
             </div>
           </div>
-          <p className="text-sm mb-1 max-md:text-center">
+          <p className="text-sm mb-2 max-md:text-center">
             © {new Date().getFullYear()}{" "}
             <span className="font-semibold text-white">THUISA</span>. All rights
             reserved.
