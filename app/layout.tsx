@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Link from "next/link";
+import Menu from "@/components/menu";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,43 +27,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <>
-      <html lang="en">
-        <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        >
-          <div className="bg-white flex h-20 items-center justify-between px-10 shadow">
-            <Link href={`/`}>
-              <Image
-                src={`/logoThuisa.jpeg`}
-                width={70}
-                alt="THUISA Logo"
-                height={70}
-              ></Image>
-            </Link>
-            <div className="flex h-full items-center text-black font-medium text-sm md:text-base">
-              {[
-                { label: "Home", href: "/" },
-                { label: "About Us", href: "/about" },
-                { label: "Our Events", href: "/events" },
-                { label: "Informations", href: "/information" },
-                { label: "Resources", href: "/resources" },
-                { label: "Support", href: "/support" },
-              ].map((item, i) => (
-                <Link
-                  key={i}
-                  href={item.href}
-                  className="flex items-center px-5 hover:bg-gradient-to-r hover:text-gray-400 transition duration-300"
-                >
-                  {item.label}
-                </Link>
-              ))}
-            </div>
-          </div>
-          {children}
-        </body>
-      </html>
-      <footer>by THUISA &copy;2025 team</footer>
-    </>
+    <html lang="en">
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+        <Menu />
+        {children}
+      </body>
+    </html>
   );
 }

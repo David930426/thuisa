@@ -25,7 +25,7 @@ export default function SwiperSection() {
             style={{ backgroundImage: "url('/gatherThuisa.png')" }}
           >
             <div className="w-full flex flex-col justify-center items-center bg-black/50 h-full px-6 text-center">
-              <h1 className="text-white text-4xl md:text-6xl font-bold animate-in slide-in-from-right delay-700">
+              <h1 className="text-white text-4xl md:text-6xl font-bold">
                 Welcome to THUISA
               </h1>
               <p className="mt-4 text-lg md:text-xl text-white/90 max-w-3xl mx-auto">
