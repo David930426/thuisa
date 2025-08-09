@@ -37,17 +37,33 @@ export default function Footer() {
             <Image
               src="/android-chrome-192x192.png"
               alt="thuisaLogo"
-              width={50}
-              height={50}
+              width={60}
+              height={60}
             />
-            <Image src="/oirLogo.png" alt="oirLogo" width={50} height={50} />
-            <div className="w-px bg-gray-300 max-md:hidden" />
+            <Image src="/oirLogo.png" alt="oirLogo" width={60} height={60} />
+            <div className="w-px bg-gray-300" />
             <div>
               <h3 className="text-white font-semibold text-sm md:text-base mb-2">
                 Follow Our Social Media
               </h3>
-              <div>
-                {/* sosmed logo by using simple icons */}
+              <div className="flex">
+                <Link href={"https://www.instagram.com/thuisa_official"} className="hover:cursor-pointer" target="__blank">
+                  <Image
+                    src={"/instagram.png"}
+                    alt="instagramLogo"
+                    width={30}
+                    height={30}
+                  />
+                </Link>
+                <Link href={"https://www.tiktok.com/@thuisa_official"} className="hover:cursor-pointer" target="__blank">
+                  <Image
+                    src={"/tiktok.png"}
+                    alt="tiktokLogo"
+                    width={30}
+                    height={30}
+                    className="mx-3 border-1 border-white rounded-md p-1"
+                  />
+                </Link>
               </div>
             </div>
           </div>
