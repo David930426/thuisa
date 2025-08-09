@@ -23,7 +23,7 @@ export default function Menu() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="bg-white flex h-20 items-center justify-between px-10 shadow">
+    <div className="sticky top-0 z-50 bg-white flex h-20 items-center justify-between px-10 shadow">
       <Link href={`/`}>
         <Image
           src={`/logoThuisa.jpeg`}
