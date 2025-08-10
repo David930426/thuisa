@@ -11,7 +11,7 @@ import Link from "next/link";
 export default function Page() {
   return (
     <>
-      <section className="relative w-full h-[70vh] flex items-center justify-center">
+      <section className="relative w-full h-[70vh] flex items-center justify-center mt-1">
         <div className="absolute inset-0">
           <Image
             src={`/android-chrome-512x512.png`}
@@ -29,7 +29,7 @@ export default function Page() {
           </p>
           <Link
             href="https://oir.thu.edu.tw/"
-            className="m-10 inline-block bg-red-500 bg-red-600 text-white px-6 py-3 rounded-md transition-colors duration-300 hover:cursor-pointer"
+            className="m-10 inline-block bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-md transition-colors duration-300 hover:cursor-pointer"
             target="__block"
         >
             Learn More

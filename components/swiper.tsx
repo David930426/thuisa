@@ -36,7 +36,7 @@ export default function SwiperSection() {
               <div className="mt-6">
                 <Link
                   href="/about"
-                  className="bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-md transition"
+                  className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-md transition"
                 >
                   Learn More
                 </Link>
