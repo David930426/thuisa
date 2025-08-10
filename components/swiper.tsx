@@ -26,12 +26,10 @@ export default function SwiperSection() {
           >
             <div className="w-full flex flex-col justify-center items-center bg-black/50 h-full px-6 text-center">
               <h1 className="text-white text-4xl md:text-6xl font-bold">
-                Welcome to THUISA
+                Connecting Indonesians at Tunghai
               </h1>
               <p className="mt-4 text-lg md:text-xl text-white/90 max-w-3xl mx-auto">
-                The Indonesian Student Association at Tunghai University —
-                building community, culture, and support for all Indonesian
-                students in Taiwan.
+                Where friendships, culture, and memories come together.
               </p>
               <div className="mt-6">
                 <Link
