@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Homepage() {
   return (
     <>
-      <div className="w-full bg-red-600 text-center my-20 py-20 text-white">
+      <div className="w-full bg-red-600 text-center mb-20 py-20 text-white">
         <h1 className="text-5xl md:text-9xl font-bold mb-3">THUISA</h1>
         <p className="text-md md:text-3xl">
           Tunghai Univeristy Indonesian Student Association
@@ -45,18 +45,6 @@ export default function Homepage() {
           </div>
         </div>
       </div>
-      {/* <div className="max-w-5xl mx-10 md:mx-auto mt-10 md:mt-20 py-10 items-center">
-        <h1 className="text-xl md:text-3xl font-bold mb-4 md:mb-8 text-red-600">
-          About THUISA
-        </h1>
-        <p className="text-sm md:text-xl">
-          The Tunghai University Indonesian Student Association (THUISA) is a
-          student-led community dedicated to supporting and connecting
-          Indonesian students in Taiwan. We create a friendly environment to
-          celebrate our heritage, help newcomers adapt, and strengthen bonds
-          between members through cultural, academic, and social activities.
-        </p>
-      </div> */}
       <div className="mt-30 mb-10 text-center mx-5">
         <h1 className="text-xl md:text-3xl font-bold mb-4 md:mb-8 text-red-600">
           What’s Happening Next?
@@ -66,10 +54,10 @@ export default function Homepage() {
           coming up:
         </p>
       </div>
-      <div className="max-w-7xl md:mx-10 md:mx-auto py-10 md:py-10 md:shadow rounded-4xl md:px-20 px-5">
+      <div className="max-w-7xl md:mx-auto mx-10 py-10 md:py-10 md:shadow rounded-4xl md:px-20 px-5">
         <div className="md:flex">
           <div className="w-full border-gray border-1 p-5 md:p-6 rounded-4xl shadow mr-10 max-md:mb-5">
-            <h1 className="text-center text-md md:text-xl md:text-2xl font-bold mb-4 md:mb-8 text-red-600">
+            <h1 className="text-center text-md md:text-2xl font-bold mb-4 md:mb-8 text-red-600">
               YingXin 1
             </h1>
             <div className="flex">
@@ -91,13 +79,13 @@ export default function Homepage() {
             </div>
           </div>
           <div className="w-full border-gray border-1 md:p-6 p-5 rounded-4xl shadow mr-10 max-md:mb-5">
-            <h1 className="text-center text-md md:text-xl md:text-2xl font-bold mb-4 md:mb-8 text-red-600">
+            <h1 className="text-center text-md md:text-2xl font-bold mb-4 md:mb-8 text-red-600">
               YingXin 2
             </h1>
             <div className="flex">
               <Image
-                src="/yingxin1.JPG"
-                alt="yingxin1"
+                src="/yingxin2.jpeg"
+                alt="yingxin2"
                 width={200}
                 height={300}
                 className="rounded-xl md:min-w-50 mr-6 min-w-30"
@@ -114,10 +102,58 @@ export default function Homepage() {
           </div>
         </div>
         <Link href="/events">
-          <p className="mt-10 text-center md:text-xl hover:cursor-pointer hover:red-600">
+          <p className="mt-10 text-center md:text-xl hover:cursor-pointer hover:text-red-600">
             VIEW ALL EVENTS
           </p>
         </Link>
+      </div>
+      <div className="w-full bg-red-600 mt-20 pt-20 pb-30">
+        <h1 className="text-xl md:text-5xl font-bold mb-4 md:mb-8 text-white text-center">
+          Our Contacts
+        </h1>
+        <div className="flex justify-center gap-5 md:gap-10">
+          <Link
+            href="https://www.instagram.com/thuisa_official"
+            className="hover:shadow-2xl hover:cursor-pointer"
+            target="__blank"
+          >
+            <Image
+              src="/instagram.png"
+              alt="instagram"
+              width={50}
+              height={50}
+              className="md:w-20"
+            />
+          </Link>
+          <Link
+            href="https://www.tiktok.com/@thuisa_official"
+            className="hover:shadow-2xl hover:cursor-pointer"
+            target="__blank"
+          >
+            <Image
+              src="/tiktok.png"
+              alt="tiktok"
+              width={50}
+              height={50}
+              className="md:w-20"
+            />
+          </Link>
+          <Link
+            href=""
+            className="hover:shadow-2xl hover:cursor-pointer"
+            target="__blank"
+          >
+            <Image
+              src="/line.png"
+              alt="Line"
+              width={50}
+              height={50}
+              className="md:w-20 rounded-2xl"
+            />
+          </Link>
+        </div>
+        <p className="text-white text-center md:text-xl mt-10 mb-1">Email: </p>
+        <p className="text-white text-center md:text-xl">Phone Number: </p>
       </div>
     </>
   );

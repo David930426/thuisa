@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-400 py-6 mt-10">
+    <footer className="bg-gray-900 text-gray-400 py-6">
       <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
         <div className="flex gap-10 md:gap-8 text-sm">
           <div className="flex flex-col md:flex-row gap-3 md:gap-8 mb-2">
@@ -62,6 +62,14 @@ export default function Footer() {
                     width={30}
                     height={30}
                     className="mx-3 border-1 border-white rounded-md p-1"
+                  />
+                </Link>
+                <Link href={""} className="hover:cursor-pointer" target="__blank">
+                  <Image
+                    src={"/line.png"}
+                    alt="lineLogo"
+                    width={30}
+                    height={30}
                   />
                 </Link>
               </div>
