@@ -14,7 +14,7 @@ export default function Page() {
       <section className="relative w-full h-[70vh] flex items-center justify-center mt-1">
         <div className="absolute inset-0">
           <Image
-            src={`/android-chrome-512x512.png`}
+            src={`/1734509480053.jpeg`}
             alt="THUISA Group Photo"
             fill
             className="object-cover"
@@ -31,12 +31,37 @@ export default function Page() {
             href="https://oir.thu.edu.tw/"
             className="m-10 inline-block bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-md transition-colors duration-300 hover:cursor-pointer"
             target="__block"
-        >
+          >
             Learn More
           </Link>
         </div>
       </section>
-      <Accordion
+      <div className="max-w-5xl mx-10 md:mx-auto mt-20 flex">
+        <div className="max-w-2xl md:mx-10 mx-7 max-sm:mx-4">
+          <h1 className="text-xl md:text-5xl font-bold mb-4 md:mb-8 text-red-600">
+            Our Story
+          </h1>
+          <p className="text-sm md:text-xl">
+            THUISA, an integral part of Tunghai University Office of
+            International Relations, is dedicated to serving and empowering
+            Indonesian students at Tunghai. We cultivate a collaborative
+            environment, inspiring our community to thrive academically and
+            contribute meaningfully to both Taiwanese and Indonesian societies.
+          </p>
+          <div className="mt-6 md:mt-10"></div>
+        </div>
+        <div className="flex-shrink-0 w-full md:w-72 aspect-square overflow-hidden rounded-xl">
+        <Image
+          src="/1735222779300.jpeg"
+          alt="THUISA Group Photo"
+          width={500}
+          height={500}
+          className="object-cover"
+        />
+      </div>
+      </div>
+
+      {/* <Accordion
         type="single"
         collapsible
         className="w-full"
@@ -85,7 +110,7 @@ export default function Page() {
             </p>
           </AccordionContent>
         </AccordionItem>
-      </Accordion>
+      </Accordion> */}
     </>
   );
 }
