@@ -101,10 +101,10 @@ export default function Homepage() {
             </div>
           </div>
         </div>
-        <Link href="/events">
-          <p className="mt-10 text-center md:text-xl hover:cursor-pointer hover:text-red-600">
+        <Link href="/events" className="mt-10 block w-fit mx-auto md:text-xl hover:text-red-600 text-center">
+          <span>
             VIEW ALL EVENTS
-          </p>
+          </span>
         </Link>
       </div>
       <div className="w-full bg-red-600 mt-20 pt-20 pb-30">
