@@ -1,8 +1,9 @@
+import ComingSoon from "@/components/coming-soon";
 
 export default function Page() {
-    return (
-        <>
-            This is Information
-        </>
-    )
+  return (
+    <>
+      <ComingSoon />
+    </>
+  );
 }

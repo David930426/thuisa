@@ -2,7 +2,9 @@
 export default function Page() {
     return (
         <>
-            This is Support
+            <h1>
+                Our Contacts
+            </h1>
         </>
     )
 }
