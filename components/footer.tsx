@@ -70,6 +70,7 @@ export default function Footer() {
                     alt="lineLogo"
                     width={30}
                     height={30}
+                    className="rounded-sm"
                   />
                 </Link>
               </div>
