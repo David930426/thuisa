@@ -4,8 +4,44 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import Link from "next/link";
 
 export default function Page() {
+  const questionData = [
+    {
+      q: "What is THUISA?",
+      a: "THUISA is the Indonesian Student Association at Tunghai University. We host cultural, social, academic, and faith-friendly activities for Indonesian and non-Indonesian students.",
+    },
+    {
+      q: "How do I join THUISA member?",
+      a: "Fill the google form in here, and pay the membership fee to our THUISA ganbu",
+      l: "https://www.google.com/",
+    },
+    {
+      q: "How much for membership fee?",
+      a: "It's around 200nt for 1 year membership in THUISA",
+    },
+    {
+      q: "What benefit I can get as a member in THUISA?",
+      a: "All events is more cheaper than the normal price",
+    },
+    {
+      q: "Where do you post updates?",
+      a: "Instagram & TikTok for quick updates, LINE for contact our ganbu, and email for official info.",
+    },
+    {
+      q: "Where are events held?",
+      a: "Mostly on campus (Tunghai), sometimes off-campus venues in Taichung. Each event page shows the exact location and map.",
+    },
+    {
+      q: "How can I contact THUISA?",
+      a: "DM Instagram (@thuisa), add our LINE (ID: thuisa), or email thuisa2025@gmail.com.",
+    },
+    {
+      q: "How can partners/sponsors collaborate with THUISA?",
+      a: "Email us your proposal and contact details; our partnership team will follow up.",
+    },
+  ];
   return (
     <div className="min-h-screen">
       <div className="w-full text-white bg-red-600 text-center py-15 md:py-25">
@@ -50,30 +86,38 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <h1 className="text-4xl md:text-7xl font-bold pb-2 md:pb-4 text-center text-red-600 md:mt-30 mt-20">
+      <h1 className="text-4xl md:text-7xl font-bold pb-5 md:pb-10 text-center text-red-600 md:mt-30 mt-20">
         Ask THUISA
       </h1>
-      <Accordion type="single" collapsible>
-        <AccordionItem value="question1">
-          <AccordionTrigger>
-            <p className="max-w-5xl mx-10 md:mx-auto flex">Test</p>
-          </AccordionTrigger>
-          <AccordionContent>
-            <p className="max-w-5xl mx-10 md:mx-auto flex">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-              tincidunt dictum libero non lacinia. Nunc suscipit congue lacus,
-              in egestas arcu. Morbi mollis dui turpis, sit amet venenatis enim
-              aliquet at. Aliquam metus enim, tempus nec dui quis, tempor tempor
-              ipsum. Quisque massa diam, ullamcorper vel suscipit eget, ultrices
-              a lacus. In vel quam eu sapien vulputate semper id vel eros. Nam
-              fringilla elementum turpis quis ultricies. Quisque id mi lacus.
-              Fusce a ultricies tortor, vel semper dolor. Curabitur eget lacus
-              eros. Mauris imperdiet vestibulum sapien, id laoreet justo pretium
-              a. Sed malesuada vestibulum tempus.
-            </p>
-          </AccordionContent>
-        </AccordionItem>
+      <Accordion
+        type="single"
+        collapsible
+        defaultValue="question-0"
+        className="max-w-5xl mx-10 md:mx-auto mb-20"
+      >
+        {questionData.map((data, index) => (
+          <AccordionItem key={index} value={`question-${index}`}>
+            <AccordionTrigger className="hover:cursor-pointer hover:no-underline">
+              <p className="flex md:text-3xl text-xl md:py-5 py-1">{data.q}</p>
+            </AccordionTrigger>
+            <AccordionContent>
+              <p className="flex md:text-2xl text-md md:pb-10 pb-5">{data.a}</p>
+              {data.l ? (
+                <Link
+                  href={`${data.l}`}
+                  className="block text-blue-600 hover:text-red-600 md:text-2xl text-md md:pb-5"
+                  target="__blank"
+                >
+                  Click Here
+                </Link>
+              ) : (
+                ""
+              )}
+            </AccordionContent>
+          </AccordionItem>
+        ))}
       </Accordion>
+      <form></form>
     </div>
   );
 }
