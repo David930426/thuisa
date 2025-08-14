@@ -17,7 +17,7 @@ export default function Menu() {
     { label: "Our Events", href: "/events" },
     { label: "Informations", href: "/informations" },
     { label: "Resources", href: "/resources" },
-    { label: "Support", href: "/support" },
+    { label: "Contact Us", href: "/contact" },
   ];
 
   const [open, setOpen] = useState(false);

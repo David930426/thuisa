@@ -45,7 +45,7 @@ export default function Homepage() {
           </div>
         </div>
       </div>
-      <div className="mt-30 mb-10 text-center mx-5">
+      <div className="mt-30 md:mb-10 mb-2 text-center mx-5">
         <h1 className="text-xl md:text-3xl font-bold mb-4 md:mb-8 text-red-600">
           What’s Happening Next?
         </h1>
@@ -109,7 +109,7 @@ export default function Homepage() {
       </div>
       <div className="w-full bg-red-600 mt-20 pt-20 pb-30">
         <h1 className="text-xl md:text-5xl font-bold mb-4 md:mb-8 text-white text-center">
-          Our Contacts
+          Follow Us
         </h1>
         <div className="flex justify-center gap-5 md:gap-10">
           <Link
@@ -152,8 +152,6 @@ export default function Homepage() {
             />
           </Link>
         </div>
-        <p className="text-white text-center md:text-xl mt-10 mb-1">Email: </p>
-        <p className="text-white text-center md:text-xl">Phone Number: </p>
       </div>
     </>
   );

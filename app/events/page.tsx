@@ -1,9 +1,9 @@
 import ComingSoon from "@/components/coming-soon";
 
 export default function Page() {
-    return (
-        <>
-            <ComingSoon />
-        </>
-    )
+  return (
+    <div className="w-full min-h-screen">
+      <ComingSoon />
+    </div>
+  );
 }

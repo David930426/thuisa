@@ -10,7 +10,7 @@ import Link from "next/link";
 
 export default function Page() {
   return (
-    <>
+    <div className="min-h-screen">
       <section className="relative w-full h-[70vh] flex items-center justify-center mt-1">
         <div className="absolute inset-0">
           <Image
@@ -111,6 +111,6 @@ export default function Page() {
           </AccordionContent>
         </AccordionItem>
       </Accordion> */}
-    </>
+    </div>
   );
 }
