@@ -5,6 +5,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Target, Globe2 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -38,10 +39,10 @@ export default function Page() {
       </section>
       <div className="max-w-5xl mx-10 md:mx-auto mt-20 flex">
         <div className="max-w-2xl md:mx-10 mx-7 max-sm:mx-4">
-          <h1 className="text-xl md:text-5xl font-bold mb-4 md:mb-8 text-red-600">
+          <h1 className="text-xl md:text-4xl font-bold mb-4 md:mb-8 text-red-600">
             Our Story
           </h1>
-          <p className="text-sm md:text-xl">
+          <p className="text-sm md:text-xl text-gray-700">
             THUISA, an integral part of Tunghai University Office of
             International Relations, is dedicated to serving and empowering
             Indonesian students at Tunghai. We cultivate a collaborative
@@ -51,14 +52,44 @@ export default function Page() {
           <div className="mt-6 md:mt-10"></div>
         </div>
         <div className="flex-shrink-0 w-full md:w-72 aspect-square overflow-hidden rounded-xl">
-        <Image
-          src="/1735222779300.jpeg"
-          alt="THUISA Group Photo"
-          width={500}
-          height={500}
-          className="object-cover"
-        />
+          <Image
+            src="/1735222779300.jpeg"
+            alt="THUISA Group Photo"
+            width={500}
+            height={500}
+            className="object-cover"
+          />
+        </div>
       </div>
+      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="bg-white shadow-md rounded-lg p-6 flex items-start gap-4">
+          <Target className="text-red-600 w-9 h-9 flex-shrink-0"/>
+          <div>
+            <h3 className="text-2xl font-bold text-red-600">
+              Our Mission
+            </h3>
+            <p className="text-gray-700 mt-2 text-xl">
+              Support, connect, and empower Indonesian students in Tunghai University
+            </p>
+          </div>
+        </div>
+        <div className="bg-white shadow-md rounded-lg p-6 flex items-start gap-4">
+          <Globe2 className="text-yellow-500 w-9 h-9 flex-shrink-0" />
+          <div>
+            <h3 className="text-2xl font-bold text-yellow-600">Our Vision</h3>
+            <p className="text-gray-700 mt-2 text-xl">
+              Create a home away from home for every Indonesian student.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="max-w-5xl mx-10 md:mx-auto mt-20 flex">
+        <div className="max-w-2xl md:mx-10 mx-7 max-sm:mx-4">
+          <h1 className="text-xl md:text-4xl font-bold mb-4 md:mb-8 text-red-600">
+            Activities
+          </h1>
+        </div>
       </div>
 
       {/* <Accordion
