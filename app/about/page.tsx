@@ -51,7 +51,7 @@ export default function Page() {
           </p>
           <div className="mt-6 md:mt-10"></div>
         </div>
-        <div className="flex-shrink-0 w-full md:w-72 aspect-square overflow-hidden rounded-xl">
+        <div className="flex-shrink-0 w-30 md:w-72 aspect-square overflow-hidden rounded-xl">
           <Image
             src="/1735222779300.jpeg"
             alt="THUISA Group Photo"
