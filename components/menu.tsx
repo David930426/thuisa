@@ -15,7 +15,7 @@ export default function Menu() {
     { label: "Home", href: "/" },
     { label: "About Us", href: "/about" },
     { label: "Our Events", href: "/events" },
-    { label: "Informations", href: "/informations" },
+    { label: "Report", href: "/report" },
     { label: "Resources", href: "/resources" },
     { label: "Contact Us", href: "/contact" },
   ];
