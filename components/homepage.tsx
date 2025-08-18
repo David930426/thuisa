@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { ButtonPrimary, ButtonSecondary } from "./ui/button";
 
 export default function Homepage() {
   return (
@@ -29,19 +30,13 @@ export default function Homepage() {
             and support each other while building unforgettable memories in
             Taiwan.
           </p>
-          <div className="mt-6 md:mt-10">
-            <Link
-              href={""}
-              className="shadow text-sm md:text-xl bg-red-600 text-white p-3 rounded-2xl mr-2 md:mr-5 hover:cursor-pointer hover:bg-red-700 transition-colors"
-            >
-              Join Us
-            </Link>
-            <Link
-              href={"/events"}
-              className="text-sm md:text-xl shadow p-3 rounded-2xl hover:cursor-pointer hover:bg-gray-100 transition-colors"
-            >
-              Events
-            </Link>
+          <div className="mt-6 md:mt-10 flex">
+            <ButtonPrimary label="Join Us" />
+            <ButtonSecondary
+              link="/events"
+              label="Events"
+              className="ml-2 md:ml-5"
+            />
           </div>
         </div>
       </div>
@@ -101,10 +96,11 @@ export default function Homepage() {
             </div>
           </div>
         </div>
-        <Link href="/events" className="mt-10 block w-fit mx-auto md:text-xl hover:text-red-600 text-center">
-          <span>
-            VIEW ALL EVENTS
-          </span>
+        <Link
+          href="/events"
+          className="mt-10 block w-fit mx-auto md:text-xl hover:text-red-600 text-center"
+        >
+          <span>VIEW ALL EVENTS</span>
         </Link>
       </div>
       <div className="w-full bg-red-600 mt-20 pt-20 pb-30">
