@@ -4,9 +4,9 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-gray-400 py-6">
-      <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div className="max-w-6xl mx-auto px-4 flex flex-col xl:flex-row items-center justify-between gap-4">
         <div className="flex gap-10 md:gap-8 text-sm">
-          <div className="flex flex-col md:flex-row gap-3 md:gap-8 mb-2">
+          <div className="flex flex-col xl:flex-row gap-3 xl:gap-8 mb-2">
             <Link href="/" className="hover:text-gray-700 transition">
               Home
             </Link>
@@ -17,7 +17,7 @@ export default function Footer() {
               Events
             </Link>
           </div>
-          <div className="flex flex-col md:flex-row md:gap-8 gap-3">
+          <div className="flex flex-col xl:flex-row xl:gap-8 gap-3">
             <Link
               href="/report"
               className="hover:text-gray-700 transition"
@@ -33,7 +33,7 @@ export default function Footer() {
           </div>
         </div>
         <div>
-          <div className="flex flex-warp gap-4 mb-7 max-md:justify-center max-md:items-center">
+          <div className="flex flex-warp gap-4 mb-7 max-xl:justify-center max-xl:items-center">
             <Image
               src="/android-chrome-192x192.png"
               alt="thuisaLogo"
@@ -43,7 +43,7 @@ export default function Footer() {
             <Image src="/oirLogo.png" alt="oirLogo" width={60} height={60} />
             <div className="w-px bg-gray-300" />
             <div>
-              <h3 className="text-white font-semibold text-sm md:text-base mb-2">
+              <h3 className="text-white font-semibold text-sm xl:text-base mb-2">
                 Follow Our Social Media
               </h3>
               <div className="flex">
@@ -76,12 +76,12 @@ export default function Footer() {
               </div>
             </div>
           </div>
-          <p className="text-sm mb-2 max-md:text-center">
+          <p className="text-sm mb-2 max-xl:text-center">
             © {new Date().getFullYear()}{" "}
             <span className="font-semibold text-white">THUISA</span>. All rights
             reserved.
           </p>
-          <p className="text-sm max-md:text-center">
+          <p className="text-sm max-xl:text-center">
             Made by the Double U Team
           </p>
         </div>
