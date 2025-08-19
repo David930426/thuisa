@@ -34,7 +34,7 @@ export default function Page() {
       <h1 className="max-w-5xl text-red-600 text-2xl md:text-4xl font-bold 2xl:mx-auto  mx-10 mt-10 mb-5">
         Upcoming Events
       </h1>
-      <div className="shadow-xl rounded-2xl max-w-6xl mx-5 2xl:mx-auto p-10 flex md:gap-10 gap-5">
+      <div className="shadow-xl rounded-2xl max-w-6xl mx-5 2xl:mx-auto p-5 md:p-10 flex md:gap-10 gap-5">
         <div>
           <Image
             src="/yingxin1.JPG"
@@ -45,7 +45,7 @@ export default function Page() {
           />
         </div>
         <div>
-          <h1 className="text-red-600 text-xl md:text-2xl font-bold max-md:mt-5">
+          <h1 className="text-red-600 text-xl md:text-2xl font-bold max-md:mt-5 whitespace-nowrap">
             YINGXIN 1
           </h1>
           <h3 className="text-gray-400 md:text-xl text-md md:mb-5 mb-2">
@@ -61,7 +61,7 @@ export default function Page() {
             <DialogTrigger asChild>
               <ButtonPrimary label="View Event" className="max-md:mt-7" />
             </DialogTrigger>
-            <DialogContent className="md:min-w-4xl max-h-[80vh] overflow-y-auto md:text-xl text-sm">
+            <DialogContent className="2xl:min-w-4xl max-h-[80vh] overflow-y-auto md:text-xl text-sm">
               <DialogHeader>
                 <DialogTitle>YINGXIN 1</DialogTitle>
                 <DialogDescription>Freshmen Welcome Event</DialogDescription>
@@ -121,23 +121,26 @@ export default function Page() {
       {eventData.map((event, index) => (
         <div
           key={index}
-          className="shadow-md rounded-2xl max-w-6xl mx-5 2xl:mx-auto p-10 flex md:gap-10 gap-5 2xl:mt-15 mt-10"
+          className="shadow-md rounded-2xl max-w-6xl mx-5 2xl:mx-auto py-5 px-6 md:p-10 flex md:gap-10 gap-5 2xl:mt-15 mt-10 justify-between"
         >
-          <div>
-            <div className="flex flex-col items-center justify-center">
+          <div className="flex items-center gap-10">
+            <div className="md:w-20 w-5 flex flex-col items-center justify-center">
               <h1 className="text-3xl md:text-5xl font-bold text-red-600">{event.day}</h1>
               <h1 className={`text-red-600 font-bold ${!event.day ? "text-2xl md:text-4xl" : "text-xl md:text-2xl"}`}>
                 {event.month.length > 3 ? event.month.slice(0, 3) : event.month}
               </h1>
               <h1 className="text-md md:text-xl text-gray-600">{event.year}</h1>
             </div>
-            <div></div>
+            <div>
+              <h1 className="text-red-600 font-bold text-xl md:text-2xl whitespace-nowrap">{event.title}</h1>
+              <p className="text-gray-400 md:text-xl text-md md:mb-5 mb-2">This is THUISA Event</p>
+            </div>
           </div>
           <Dialog>
             <DialogTrigger asChild>
               <ButtonPrimary label="View Event" className="max-md:mt-7 my-auto" />
             </DialogTrigger>
-            <DialogContent className="md:min-w-4xl max-h-[80vh] overflow-y-auto md:text-xl text-sm">
+            <DialogContent className="2xl:min-w-4xl max-h-[80vh] overflow-y-auto md:text-xl text-sm">
               <DialogHeader>
                 <DialogTitle>YINGXIN 1</DialogTitle>
                 <DialogDescription>Freshmen Welcome Event</DialogDescription>

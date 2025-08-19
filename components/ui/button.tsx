@@ -10,7 +10,7 @@ export function ButtonPrimary({
   className?: string;
 }) {
   return (
-    <div className={`text-white ${className}`}>
+    <div className={`text-white whitespace-nowrap ${className}`}>
       {link ? (
         <Link
           href={link}
@@ -37,7 +37,7 @@ export function ButtonSecondary({
   className?: string;
 }) {
   return (
-    <div className={`${className}`}>
+    <div className={`whitespace-nowrap ${className}`}>
       {link ? (
         <Link
           href={link}
