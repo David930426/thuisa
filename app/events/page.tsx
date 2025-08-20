@@ -213,8 +213,12 @@ export default function Page() {
               </DialogTrigger>
               <DialogContent className="2xl:min-w-4xl max-h-[80vh] overflow-y-auto md:text-xl text-sm">
                 <DialogHeader>
-                  <DialogTitle>YINGXIN 1</DialogTitle>
-                  <DialogDescription>Freshmen Welcome Event</DialogDescription>
+                  <DialogTitle className="md:text-3xl text-red-600">
+                    YINGXIN 1
+                  </DialogTitle>
+                  <DialogDescription className="md:text-xl">
+                    Freshmen Welcome Event
+                  </DialogDescription>
                 </DialogHeader>
                 <p>
                   <span className="font-bold">Event Type:</span> Orientation /
@@ -291,13 +295,13 @@ export default function Page() {
             </div>
             <div>
               <h1
-                className={`text-red-600 font-bold text-xl md:text-2xl ${
+                className={`text-red-600 font-bold text-sm md:text-2xl ${
                   event.title.length < 11 && "whitespace-nowrap"
                 }`}
               >
                 {event.title}
               </h1>
-              <p className="text-gray-400 md:text-xl text-md md:mb-5 mb-2">
+              <p className="text-gray-400 md:text-xl text-sm md:mb-5 mb-2">
                 {event.subInfo ? event.subInfo : "THUISA Event"}
               </p>
             </div>
@@ -311,8 +315,10 @@ export default function Page() {
             </DialogTrigger>
             <DialogContent className="2xl:min-w-4xl max-h-[80vh] overflow-y-auto md:text-xl text-sm">
               <DialogHeader>
-                <DialogTitle>{event.title}</DialogTitle>
-                <DialogDescription>
+                <DialogTitle className="text-red-600 md:text-3xl">
+                  {event.title}
+                </DialogTitle>
+                <DialogDescription className="md:text-xl">
                   {event.subInfo ? event.subInfo : "THUISA Event"}
                 </DialogDescription>
               </DialogHeader>

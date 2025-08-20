@@ -42,8 +42,8 @@ export default function Menu() {
           <Link
             key={i}
             href={item.href}
-            className={`flex items-center lg:px-5 px-3 py-6 hover:text-black hover:border-b-red-600 hover:border-b-3 transition duration-300 ${
-              pathname === item.href && "text-black border-b-3 border-b-red-600"
+            className={`flex items-center lg:px-5 px-3 py-6 hover:text-black hover:border-b-red-600 hover:border-b-4 transition duration-300 ${
+              pathname === item.href && "text-black border-b-4 border-b-red-600"
             }`}
           >
             {item.label}
