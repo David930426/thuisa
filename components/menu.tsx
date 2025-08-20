@@ -1,4 +1,5 @@
-"use client"
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -9,8 +10,10 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Bars3Icon } from "@heroicons/react/24/outline";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Menu() {
+  const pathname = usePathname();
   const menuLabel = [
     { label: "Home", href: "/" },
     { label: "About Us", href: "/about" },
@@ -32,12 +35,16 @@ export default function Menu() {
           height={70}
         ></Image>
       </Link>
-      <div className="max-md:hidden flex h-full items-center text-black font-medium text-sm md:text-base">
+      <div
+        className={`max-md:hidden flex h-full items-center text-gray-400 font-medium text-sm md:text-base`}
+      >
         {menuLabel.map((item, i) => (
           <Link
             key={i}
             href={item.href}
-            className="flex items-center lg:px-5 px-3 hover:text-gray-400 transition duration-300"
+            className={`flex items-center lg:px-5 px-3 py-6 hover:text-black hover:border-b-red-600 hover:border-b-3 transition duration-300 ${
+              pathname === item.href && "text-black border-b-3 border-b-red-600"
+            }`}
           >
             {item.label}
           </Link>
@@ -51,7 +58,12 @@ export default function Menu() {
           </DropdownMenuTrigger>
           <DropdownMenuContent className="mr-6 mt-1">
             {menuLabel.map((item, index) => (
-              <DropdownMenuItem key={index} className="hover:cursor-pointer" asChild onSelect={() =>setOpen(false)}>
+              <DropdownMenuItem
+                key={index}
+                className="hover:cursor-pointer"
+                asChild
+                onSelect={() => setOpen(false)}
+              >
                 <Link
                   key={index}
                   href={item.href}

@@ -290,7 +290,11 @@ export default function Page() {
               <h1 className="text-md md:text-xl text-gray-600">{event.year}</h1>
             </div>
             <div>
-              <h1 className="text-red-600 font-bold text-xl md:text-2xl whitespace-nowrap">
+              <h1
+                className={`text-red-600 font-bold text-xl md:text-2xl ${
+                  event.title.length < 11 && "whitespace-nowrap"
+                }`}
+              >
                 {event.title}
               </h1>
               <p className="text-gray-400 md:text-xl text-md md:mb-5 mb-2">
