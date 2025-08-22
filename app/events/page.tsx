@@ -9,6 +9,7 @@ import {
   DialogTrigger,
   DialogClose,
 } from "@/components/ui/dialog";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Image from "next/image";
 
 export default function Page() {
@@ -220,46 +221,55 @@ export default function Page() {
                     Freshmen Welcome Event
                   </DialogDescription>
                 </DialogHeader>
-                <p>
-                  <span className="font-bold">Event Type:</span> Orientation /
-                  Community Bonding
-                </p>
-                <p>
-                  <span className="font-bold">Who Must Attend:</span> All new
-                  Indonesian freshmen at Tunghai University
-                </p>
-                <p>
-                  <span className="font-bold">Date & Time: </span>
-                </p>
-                <p>
-                  <span className="font-bold">Location: </span>
-                </p>
-                <h1 className="font-bold">About the Event</h1>
-                <p>
-                  Yingxin 1 is the very first gathering of the semester, created
-                  to warmly welcome new Indonesian students. This orientation is
-                  your chance to meet fellow freshmen, connect with seniors, and
-                  be introduced to Tunghai University and THUISA (Tunghai
-                  Indonesian Student Association).
-                </p>
-                <h1 className="font-bold">Activities</h1>
-                <p>
-                  Enjoy fun ice-breaking games, interactive sessions, and group
-                  bonding designed to help you make friends and feel part of the
-                  community right away.
-                </p>
-                <h1 className="font-bold">Why You Should Join</h1>
-                <p>
-                  Instantly connect with fellow Indonesian students. Meet
-                  seniors who will guide and support you. Learn about campus
-                  life and opportunities. Build lasting friendships and
-                  memories.
-                </p>
-                <h1 className="font-bold">Important Note</h1>
-                <p>
-                  This is a mandatory event for all new Indonesian freshmen. No
-                  registration needed — just come, join, and enjoy!
-                </p>
+                <Tabs>
+                  <TabsList className="bg-white">
+                    <TabsTrigger value="about" className="md:text-xl p-5">About</TabsTrigger>
+                    <TabsTrigger value="ticket" className="md:text-xl p-5">Ticketing</TabsTrigger>
+                  </TabsList>
+                  <TabsContent value="about" className="space-y-5">
+                    <p>
+                      <span className="font-bold">Event Type:</span> Orientation
+                      / Community Bonding
+                    </p>
+                    <p>
+                      <span className="font-bold">Who Must Attend:</span> All
+                      new Indonesian freshmen at Tunghai University
+                    </p>
+                    <p>
+                      <span className="font-bold">Date & Time: </span>
+                    </p>
+                    <p>
+                      <span className="font-bold">Location: </span>
+                    </p>
+                    <h1 className="font-bold">About the Event</h1>
+                    <p>
+                      Yingxin 1 is the very first gathering of the semester,
+                      created to warmly welcome new Indonesian students. This
+                      orientation is your chance to meet fellow freshmen,
+                      connect with seniors, and be introduced to Tunghai
+                      University and THUISA (Tunghai Indonesian Student
+                      Association).
+                    </p>
+                    <h1 className="font-bold">Activities</h1>
+                    <p>
+                      Enjoy fun ice-breaking games, interactive sessions, and
+                      group bonding designed to help you make friends and feel
+                      part of the community right away.
+                    </p>
+                    <h1 className="font-bold">Why You Should Join</h1>
+                    <p>
+                      Instantly connect with fellow Indonesian students. Meet
+                      seniors who will guide and support you. Learn about campus
+                      life and opportunities. Build lasting friendships and
+                      memories.
+                    </p>
+                    <h1 className="font-bold">Important Note</h1>
+                    <p>
+                      This is a mandatory event for all new Indonesian freshmen.
+                      No registration needed — just come, join, and enjoy!
+                    </p>{" "}
+                  </TabsContent>
+                </Tabs>
                 <DialogFooter className="md:mt-15 mt-10">
                   <DialogClose asChild>
                     <ButtonPrimary label="Close" />
