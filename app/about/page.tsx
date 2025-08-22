@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Page() {
-  const stats = [{ label: "Founded " }];
+  // const stats = [{ label: "Founded " }];
   return (
     <div className="min-h-screen">
       {/* <section className="relative w-full h-[70vh] flex items-center justify-center mt-1">
@@ -52,7 +52,7 @@ export default function Page() {
           </h1>
           <p className="text-sm md:text-xl text-gray-700 ">
             Founded in 2017, THUISA has steadily empowered Indonesian students
-            at Tunghai University. We've hosted hundreds of events, fostering a
+            at Tunghai University. We&apos;ve hosted hundreds of events, fostering a
             vibrant community that connects beyond campus. As a dynamic
             organization, we adapt to evolving trends and needs, constantly
             striving for improvement. In 2023, our focus is on strengthening our
