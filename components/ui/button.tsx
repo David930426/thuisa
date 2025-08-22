@@ -1,55 +1,59 @@
 import Link from "next/link";
 
 export function ButtonPrimary({
-  label,
+  children,
   link,
   className,
 }: {
-  label: string;
+  children: React.ReactNode;
   link?: string;
   className?: string;
 }) {
-  return (
-    <div className={`text-white whitespace-nowrap ${className}`}>
-      {link ? (
-        <Link
-          href={link}
-          className="shadow bg-red-600 hover:bg-red-700 p-3 rounded-full text-sm md:text-xl hover:cursor-pointer transition-colors"
-        >
-          <span>{label}</span>
-        </Link>
-      ) : (
-        <span className="shadow bg-red-600 hover:bg-red-700 p-3 rounded-full text-sm md:text-xl hover:cursor-pointer transition-colors">
-          {label}
-        </span>
-      )}
-    </div>
-  );
+  if (link) {
+    return (
+      <Link
+        href={link}
+        className={`text-white whitespace-nowrap shadow bg-red-600 hover:bg-red-700 p-3 rounded-full text-sm md:text-xl hover:cursor-pointer transition-colors ${className}`}
+      >
+        {children}
+      </Link>
+    );
+  } else {
+    return (
+      <button
+        className={`text-white whitespace-nowrap shadow bg-red-600 hover:bg-red-700 p-3 rounded-full text-sm md:text-xl hover:cursor-pointer transition-colors ${className}`}
+      >
+        {children}
+      </button>
+    );
+  }
 }
 
 export function ButtonSecondary({
+  children,
   link,
-  label,
   className,
 }: {
+  children: React.ReactNode;
   link?: string;
-  label: string;
   className?: string;
 }) {
-  return (
-    <div className={`whitespace-nowrap ${className}`}>
-      {link ? (
-        <Link
-          href={link}
-          className="shadow bg-white hover:bg-gray-100 p-3 rounded-full text-sm md:text-xl hover:cursor-pointer transition-colors"
-        >
-          <span>{label}</span>
-        </Link>
-      ) : (
-        <span className="shadow bg-white hover:bg-gray-100 p-3 rounded-full text-sm md:text-xl hover:cursor-pointer transition-colors">
-          {label}
-        </span>
-      )}
-    </div>
-  );
+  if (link) {
+    return (
+      <Link
+        href={link}
+        className={`whitespace-nowrap shadow bg-white hover:bg-gray-100 p-3 rounded-full text-sm md:text-xl hover:cursor-pointer transition-colors ${className}`}
+      >
+        {children}
+      </Link>
+    );
+  } else {
+    return (
+      <button
+        className={`whitespace-nowrap shadow bg-white hover:bg-gray-100 p-3 rounded-full text-sm md:text-xl hover:cursor-pointer transition-colors ${className}`}
+      >
+        {children}
+      </button>
+    );
+  }
 }

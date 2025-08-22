@@ -31,12 +31,10 @@ export default function Homepage() {
             Taiwan.
           </p>
           <div className="mt-6 md:mt-10 flex">
-            <ButtonPrimary label="Join Us" />
-            <ButtonSecondary
-              link="/events"
-              label="Events"
-              className="ml-2 md:ml-5"
-            />
+            <ButtonPrimary>Join Us</ButtonPrimary>
+            <ButtonSecondary link="/events" className="ml-2 md:ml-5">
+              Events
+            </ButtonSecondary>
           </div>
         </div>
       </div>

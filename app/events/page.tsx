@@ -212,7 +212,9 @@ export default function Page() {
             </p>
             <Dialog>
               <DialogTrigger asChild>
-                <ButtonPrimary label="View Event" className="max-md:mt-7" />
+                <ButtonPrimary className="max-md:mt-7">
+                  View Event
+                </ButtonPrimary>
               </DialogTrigger>
               <DialogContent className="2xl:min-w-4xl max-h-[80vh] overflow-y-auto md:text-xl text-sm">
                 <DialogHeader>
@@ -224,7 +226,7 @@ export default function Page() {
                   </DialogDescription>
                 </DialogHeader>
                 <Tabs>
-                  <TabsList className="md:py-6 md:my-3 my-2">
+                  <TabsList className="md:py-6 md:my-3 md:mb-5 my-2">
                     <TabsTrigger
                       value="about"
                       className="md:text-xl md:p-5 hover:cursor-pointer"
@@ -283,7 +285,7 @@ export default function Page() {
                     </p>{" "}
                     <DialogFooter className="md:mt-15 mt-10">
                       <DialogClose asChild>
-                        <ButtonPrimary label="Close" />
+                        <ButtonPrimary>Close</ButtonPrimary>
                       </DialogClose>
                     </DialogFooter>
                   </TabsContent>
@@ -331,10 +333,9 @@ export default function Page() {
           </div>
           <Dialog>
             <DialogTrigger asChild>
-              <ButtonPrimary
-                label="View Event"
-                className="max-md:mt-7 my-auto"
-              />
+              <ButtonPrimary className="max-md:mt-7 my-auto">
+                View Event
+              </ButtonPrimary>
             </DialogTrigger>
             <DialogContent className="2xl:min-w-4xl max-h-[80vh] overflow-y-auto md:text-xl text-sm">
               <DialogHeader>
@@ -346,7 +347,7 @@ export default function Page() {
                 </DialogDescription>
               </DialogHeader>
               <Tabs defaultValue="about">
-                <TabsList className="md:py-6 md:my-3 my-2">
+                <TabsList className="md:py-6 md:my-3 md:mb-5 my-2">
                   <TabsTrigger
                     value="about"
                     className="md:text-xl md:p-5 hover:cursor-pointer"
@@ -422,7 +423,7 @@ export default function Page() {
                   )}
                   <DialogFooter className="md:mt-15 mt-10">
                     <DialogClose asChild>
-                      <ButtonPrimary label="Close" />
+                      <ButtonPrimary>Close</ButtonPrimary>
                     </DialogClose>
                   </DialogFooter>
                 </TabsContent>
@@ -430,7 +431,7 @@ export default function Page() {
                   <ComingSoon />
                   <DialogFooter className="md:mt-15 mt-10">
                     <DialogClose asChild>
-                      <ButtonPrimary label="Close" />
+                      <ButtonPrimary>Close</ButtonPrimary>
                     </DialogClose>
                   </DialogFooter>
                 </TabsContent>
