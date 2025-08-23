@@ -60,6 +60,7 @@ export function ContactForm() {
           <option value="concern">Concern</option>
           <option value="suggestion">Suggestion</option>
           <option value="support">Support Request</option>
+          <option value="other">Other</option>
         </select>
 
         <label htmlFor="message">Your Message</label>
