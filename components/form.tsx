@@ -2,7 +2,8 @@
 import { ComplainState, sendSuggest } from "@/actions/supportAction";
 import { ButtonSecondary } from "@/components/ui/button";
 import Spinner from "@/components/ui/spinner";
-import { useActionState } from "react";
+import { useActionState, useEffect } from "react";
+import { toast } from "sonner";
 
 export function ContactForm() {
   const initialState: ComplainState = { ok: false, message: "" };
@@ -10,6 +11,11 @@ export function ContactForm() {
     sendSuggest,
     initialState
   );
+  useEffect(()=> {
+    if(!state.message) return;
+    if (state.ok) toast.success(state.message);
+    else toast.error(state.message);
+  }, [state.ok, state.message])
   return (
     <div className="bg-red-600 text-white md:py-30 py-20">
       <div className="md:max-w-5xl md:mx-auto mx-10">
@@ -64,10 +70,13 @@ export function ContactForm() {
           className="border rounded-2xl px-3 py-2 md:min-h-50 min-h-30 text-black bg-white md:mb-20 mb-10"
         />
         <ButtonSecondary className={`text-black`} disabled={isPending}>
-          {isPending ? <Spinner className="size-7 text-red-600 mx-auto"/> : "Submit"}
+          {isPending ? (
+            <Spinner className="size-7 text-red-600 mx-auto" />
+          ) : (
+            "Submit"
+          )}
         </ButtonSecondary>
       </form>
-      {state.message}
     </div>
   );
 }

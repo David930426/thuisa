@@ -22,6 +22,7 @@ SMTP_PORT=465
 SMTP_SECURE=true
 SMTP_USER=your_email@gmail.com
 SMTP_PASS=your_app_password
+# SMTP gmail pass must use app password, cannot use basic password
 
 # --- Mail metadata ---
 MAIL_FROM="GlowGrove Support <support@glowgrove.com>"
