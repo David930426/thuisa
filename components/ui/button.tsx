@@ -21,6 +21,7 @@ export function ButtonPrimary({
   } else {
     return (
       <button
+        type="submit"
         className={`text-white whitespace-nowrap shadow bg-red-600 hover:bg-red-700 p-3 rounded-full text-sm md:text-xl hover:cursor-pointer transition-colors ${className}`}
       >
         {children}
@@ -50,6 +51,7 @@ export function ButtonSecondary({
   } else {
     return (
       <button
+        type="submit"
         className={`whitespace-nowrap shadow bg-white hover:bg-gray-100 p-3 rounded-full text-sm md:text-xl hover:cursor-pointer transition-colors ${className}`}
       >
         {children}

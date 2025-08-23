@@ -1,3 +1,4 @@
+import { ContactForm } from "@/components/form";
 import {
   Accordion,
   AccordionContent,
@@ -117,7 +118,7 @@ export default function Page() {
           </AccordionItem>
         ))}
       </Accordion>
-      <form></form>
+      <ContactForm />
     </div>
   );
 }
