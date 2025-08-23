@@ -14,4 +14,15 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 This project uses tailwind CSS  for styling and designing the website.
 
+## Set Up Your SMTP by using .env.local
 
+# --- SMTP settings ---
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=465
+SMTP_SECURE=true
+SMTP_USER=your_email@gmail.com
+SMTP_PASS=your_app_password
+
+# --- Mail metadata ---
+MAIL_FROM="GlowGrove Support <support@glowgrove.com>"
+MAIL_TO="support@glowgrove.com"

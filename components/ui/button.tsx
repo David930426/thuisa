@@ -2,17 +2,19 @@ import Link from "next/link";
 
 export function ButtonPrimary({
   children,
+  disabled = false,
   link,
   className,
 }: {
   children: React.ReactNode;
+  disabled?: boolean;
   link?: string;
   className?: string;
 }) {
   if (link) {
     return (
       <Link
-        href={link}
+        href={disabled ? "#" : link}
         className={`text-white whitespace-nowrap shadow bg-red-600 hover:bg-red-700 p-3 rounded-full text-sm md:text-xl hover:cursor-pointer transition-colors ${className}`}
       >
         {children}
@@ -22,6 +24,7 @@ export function ButtonPrimary({
     return (
       <button
         type="submit"
+        disabled={disabled}
         className={`text-white whitespace-nowrap shadow bg-red-600 hover:bg-red-700 p-3 rounded-full text-sm md:text-xl hover:cursor-pointer transition-colors ${className}`}
       >
         {children}
@@ -32,17 +35,19 @@ export function ButtonPrimary({
 
 export function ButtonSecondary({
   children,
+  disabled = false,
   link,
   className,
 }: {
   children: React.ReactNode;
+  disabled?: boolean;
   link?: string;
   className?: string;
 }) {
   if (link) {
     return (
       <Link
-        href={link}
+        href={disabled ? "#" : link}
         className={`whitespace-nowrap shadow bg-white hover:bg-gray-100 p-3 rounded-full text-sm md:text-xl hover:cursor-pointer transition-colors ${className}`}
       >
         {children}
@@ -52,6 +57,7 @@ export function ButtonSecondary({
     return (
       <button
         type="submit"
+        disabled={disabled}
         className={`whitespace-nowrap shadow bg-white hover:bg-gray-100 p-3 rounded-full text-sm md:text-xl hover:cursor-pointer transition-colors ${className}`}
       >
         {children}
