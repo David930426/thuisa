@@ -9,10 +9,33 @@ import {
   DropdownMenuItem,
 } from "@/components/ui/dropdown-menu";
 import { Bars3Icon } from "@heroicons/react/24/outline";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 
 export default function Menu() {
+  const [show, setShow] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  useEffect(() => {
+    const controlNavbar = () => {
+      if (typeof window !== "undefined") {
+        if (window.scrollY > lastScrollY) {
+          // scrolling down
+          setShow(false);
+        } else {
+          // scrolling up
+          setShow(true);
+        }
+        setLastScrollY(window.scrollY);
+      }
+    };
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", controlNavbar);
+
+      return () => {
+        window.removeEventListener("scroll", controlNavbar);
+      };
+    }
+  }, [lastScrollY]);
   const pathname = usePathname();
   const menuLabel = [
     { label: "Home", href: "/" },
@@ -26,7 +49,11 @@ export default function Menu() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="sticky top-0 z-50 bg-white flex h-20 items-center justify-between px-10 shadow">
+    <div
+      className={`fixed top-0 left-0 w-full z-50 transition-transform duration-300 ${
+        show ? "translate-y-0" : "-translate-y-full"
+      } bg-white flex h-20 items-center justify-between px-10 shadow`}
+    >
       <Link href={`/`}>
         <Image
           src={`/logoThuisa.jpeg`}
