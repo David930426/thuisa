@@ -35,12 +35,12 @@ export default function Footer() {
         <div>
           <div className="flex flex-warp gap-4 mb-7 max-xl:justify-center max-xl:items-center">
             <Image
-              src="/android-chrome-192x192.png"
+              src="./android-chrome-192x192.png"
               alt="thuisaLogo"
               width={60}
               height={60}
             />
-            <Image src="/oirLogo.png" alt="oirLogo" width={60} height={60} />
+            <Image src="./oirLogo.png" alt="oirLogo" width={60} height={60} />
             <div className="w-px bg-gray-300" />
             <div>
               <h3 className="text-white font-semibold text-sm xl:text-base mb-2">
@@ -49,7 +49,7 @@ export default function Footer() {
               <div className="flex">
                 <Link href={"https://www.instagram.com/thuisa_official"} className="hover:cursor-pointer" target="__blank">
                   <Image
-                    src={"/instagram.png"}
+                    src={"./instagram.png"}
                     alt="instagramLogo"
                     width={30}
                     height={30}
@@ -57,7 +57,7 @@ export default function Footer() {
                 </Link>
                 <Link href={"https://www.tiktok.com/@thuisa_official"} className="hover:cursor-pointer" target="__blank">
                   <Image
-                    src={"/tiktok.png"}
+                    src={"./tiktok.png"}
                     alt="tiktokLogo"
                     width={30}
                     height={30}
@@ -66,7 +66,7 @@ export default function Footer() {
                 </Link>
                 <Link href={""} className="hover:cursor-pointer" target="__blank">
                   <Image
-                    src={"/line.png"}
+                    src={"./line.png"}
                     alt="lineLogo"
                     width={30}
                     height={30}

@@ -190,7 +190,7 @@ export default function Page() {
         <div className="flex md:gap-10 gap-5">
           <div>
             <Image
-              src="/yingxin1.JPG"
+              src="./yingxin1.JPG"
               alt="yingxin1"
               width={200}
               height={220}

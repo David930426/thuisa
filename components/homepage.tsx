@@ -14,7 +14,7 @@ export default function Homepage() {
       <div className="max-w-5xl mx-10 md:mx-auto mt-20 flex">
         <div>
           <Image
-            src={"/homePage1.JPG"}
+            src={"./homePage1.JPG"}
             alt="homePage1"
             width={600}
             height={650}
@@ -55,7 +55,7 @@ export default function Homepage() {
             </h1>
             <div className="flex">
               <Image
-                src="/yingxin1.JPG"
+                src="./yingxin1.JPG"
                 alt="yingxin1"
                 width={200}
                 height={220}
@@ -77,7 +77,7 @@ export default function Homepage() {
             </h1>
             <div className="flex">
               <Image
-                src="/yingxin2.jpeg"
+                src="./yingxin2.jpeg"
                 alt="yingxin2"
                 width={200}
                 height={300}
@@ -112,7 +112,7 @@ export default function Homepage() {
             target="__blank"
           >
             <Image
-              src="/instagram.png"
+              src="./instagram.png"
               alt="instagram"
               width={50}
               height={50}
@@ -125,7 +125,7 @@ export default function Homepage() {
             target="__blank"
           >
             <Image
-              src="/tiktok.png"
+              src="./tiktok.png"
               alt="tiktok"
               width={50}
               height={50}
@@ -138,7 +138,7 @@ export default function Homepage() {
             target="__blank"
           >
             <Image
-              src="/line.png"
+              src="./line.png"
               alt="Line"
               width={50}
               height={50}

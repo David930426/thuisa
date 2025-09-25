@@ -142,7 +142,7 @@ export default function Page() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
             <div className="flex flex-col items-center">
               <Image
-                src="/images/member1.jpg"
+                src="./images/member1.jpg"
                 alt="Leader 1"
                 width={160}
                 height={160}
@@ -153,7 +153,7 @@ export default function Page() {
             </div>
             <div className="flex flex-col items-center">
               <Image
-                src="/images/member2.jpg"
+                src="./images/member2.jpg"
                 alt="Leader 2"
                 width={160}
                 height={160}
@@ -164,7 +164,7 @@ export default function Page() {
             </div>
             <div className="flex flex-col items-center">
               <Image
-                src="/images/member3.jpg"
+                src="./images/member3.jpg"
                 alt="Leader 3"
                 width={160}
                 height={160}
@@ -176,7 +176,7 @@ export default function Page() {
 
             <div className="flex flex-col items-center">
               <Image
-                src="/images/member3.jpg"
+                src="./images/member3.jpg"
                 alt="Leader 3"
                 width={160}
                 height={160}
@@ -190,7 +190,7 @@ export default function Page() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
             <div className="flex flex-col items-center">
               <Image
-                src="/images/member1.jpg"
+                src="./images/member1.jpg"
                 alt="Leader 1"
                 width={160}
                 height={160}
@@ -201,7 +201,7 @@ export default function Page() {
             </div>
             <div className="flex flex-col items-center">
               <Image
-                src="/images/member2.jpg"
+                src="./images/member2.jpg"
                 alt="Leader 2"
                 width={160}
                 height={160}
@@ -212,7 +212,7 @@ export default function Page() {
             </div>
             <div className="flex flex-col items-center">
               <Image
-                src="/images/member3.jpg"
+                src="./images/member3.jpg"
                 alt="Leader 3"
                 width={160}
                 height={160}
@@ -224,7 +224,7 @@ export default function Page() {
 
             <div className="flex flex-col items-center">
               <Image
-                src="/images/member3.jpg"
+                src="./images/member3.jpg"
                 alt="Leader 3"
                 width={160}
                 height={160}
@@ -239,7 +239,7 @@ export default function Page() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
             <div className="flex flex-col items-center">
               <Image
-                src="/images/member1.jpg"
+                src="./images/member1.jpg"
                 alt="Leader 1"
                 width={160}
                 height={160}
@@ -250,7 +250,7 @@ export default function Page() {
             </div>
             <div className="flex flex-col items-center">
               <Image
-                src="/images/member2.jpg"
+                src="./images/member2.jpg"
                 alt="Leader 2"
                 width={160}
                 height={160}
@@ -261,7 +261,7 @@ export default function Page() {
             </div>
             <div className="flex flex-col items-center">
               <Image
-                src="/images/member3.jpg"
+                src="./images/member3.jpg"
                 alt="Leader 3"
                 width={160}
                 height={160}
@@ -273,7 +273,7 @@ export default function Page() {
 
             <div className="flex flex-col items-center">
               <Image
-                src="/images/member3.jpg"
+                src="./images/member3.jpg"
                 alt="Leader 3"
                 width={160}
                 height={160}
@@ -288,7 +288,7 @@ export default function Page() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
             <div className="flex flex-col items-center">
               <Image
-                src="/images/member1.jpg"
+                src="./images/member1.jpg"
                 alt="Leader 1"
                 width={160}
                 height={160}
@@ -299,7 +299,7 @@ export default function Page() {
             </div>
             <div className="flex flex-col items-center">
               <Image
-                src="/images/member2.jpg"
+                src="./images/member2.jpg"
                 alt="Leader 2"
                 width={160}
                 height={160}
@@ -310,7 +310,7 @@ export default function Page() {
             </div>
             <div className="flex flex-col items-center">
               <Image
-                src="/images/member3.jpg"
+                src="./images/member3.jpg"
                 alt="Leader 3"
                 width={160}
                 height={160}
@@ -322,7 +322,7 @@ export default function Page() {
 
             <div className="flex flex-col items-center">
               <Image
-                src="/images/member3.jpg"
+                src="./images/member3.jpg"
                 alt="Leader 3"
                 width={160}
                 height={160}
@@ -337,7 +337,7 @@ export default function Page() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
             <div className="flex flex-col items-center">
               <Image
-                src="/images/member1.jpg"
+                src="./images/member1.jpg"
                 alt="Leader 1"
                 width={160}
                 height={160}
@@ -348,7 +348,7 @@ export default function Page() {
             </div>
             <div className="flex flex-col items-center">
               <Image
-                src="/images/member2.jpg"
+                src="./images/member2.jpg"
                 alt="Leader 2"
                 width={160}
                 height={160}
@@ -359,7 +359,7 @@ export default function Page() {
             </div>
             <div className="flex flex-col items-center">
               <Image
-                src="/images/member3.jpg"
+                src="./images/member3.jpg"
                 alt="Leader 3"
                 width={160}
                 height={160}
@@ -371,7 +371,7 @@ export default function Page() {
 
             <div className="flex flex-col items-center">
               <Image
-                src="/images/member3.jpg"
+                src="./images/member3.jpg"
                 alt="Leader 3"
                 width={160}
                 height={160}
@@ -386,7 +386,7 @@ export default function Page() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
             <div className="flex flex-col items-center">
               <Image
-                src="/images/member1.jpg"
+                src="./images/member1.jpg"
                 alt="Leader 1"
                 width={160}
                 height={160}
@@ -397,7 +397,7 @@ export default function Page() {
             </div>
             <div className="flex flex-col items-center">
               <Image
-                src="/images/member2.jpg"
+                src="./images/member2.jpg"
                 alt="Leader 2"
                 width={160}
                 height={160}
@@ -408,7 +408,7 @@ export default function Page() {
             </div>
             <div className="flex flex-col items-center">
               <Image
-                src="/images/member3.jpg"
+                src="./images/member3.jpg"
                 alt="Leader 3"
                 width={160}
                 height={160}
@@ -420,7 +420,7 @@ export default function Page() {
 
             <div className="flex flex-col items-center">
               <Image
-                src="/images/member3.jpg"
+                src="./images/member3.jpg"
                 alt="Leader 3"
                 width={160}
                 height={160}
@@ -435,7 +435,7 @@ export default function Page() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
             <div className="flex flex-col items-center">
               <Image
-                src="/images/member1.jpg"
+                src="./images/member1.jpg"
                 alt="Leader 1"
                 width={160}
                 height={160}
@@ -446,7 +446,7 @@ export default function Page() {
             </div>
             <div className="flex flex-col items-center">
               <Image
-                src="/images/member2.jpg"
+                src="./images/member2.jpg"
                 alt="Leader 2"
                 width={160}
                 height={160}
@@ -457,7 +457,7 @@ export default function Page() {
             </div>
             <div className="flex flex-col items-center">
               <Image
-                src="/images/member3.jpg"
+                src="./images/member3.jpg"
                 alt="Leader 3"
                 width={160}
                 height={160}
@@ -469,7 +469,7 @@ export default function Page() {
 
             <div className="flex flex-col items-center">
               <Image
-                src="/images/member3.jpg"
+                src="./images/member3.jpg"
                 alt="Leader 3"
                 width={160}
                 height={160}

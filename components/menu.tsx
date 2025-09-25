@@ -56,7 +56,7 @@ export default function Menu() {
     >
       <Link href={`/`}>
         <Image
-          src={`/logoThuisa.jpeg`}
+          src={`./logoThuisa.jpeg`}
           width={70}
           alt="THUISA Logo"
           height={70}
