@@ -1,21 +1,22 @@
 "use client";
-import { ComplainState, sendSuggest } from "@/actions/supportAction";
+// import { ComplainState, sendSuggest } from "@/actions/supportAction";
+import { ComplainState } from "@/actions/supportAction";
 import { ButtonSecondary } from "@/components/ui/button";
-import Spinner from "@/components/ui/spinner";
-import { useActionState, useEffect } from "react";
-import { toast } from "sonner";
+// import Spinner from "@/components/ui/spinner";
+// import { useActionState, useEffect } from "react";
+// import { toast } from "sonner";
 
 export function ContactForm() {
   const initialState: ComplainState = { ok: false, message: "" };
-  const [state, formAction, isPending] = useActionState(
-    sendSuggest,
-    initialState
-  );
-  useEffect(()=> {
-    if(!state.message) return;
-    if (state.ok) toast.success(state.message);
-    else toast.error(state.message);
-  }, [state.ok, state.message])
+  // const [state, formAction, isPending] = useActionState(
+  //   sendSuggest,
+  //   initialState
+  // );
+  // useEffect(()=> {
+  //   if(!state.message) return;
+  //   if (state.ok) toast.success(state.message);
+  //   else toast.error(state.message);
+  // }, [state.ok, state.message])
   return (
     <div className="bg-red-600 text-white md:py-30 py-20">
       <div className="md:max-w-5xl md:mx-auto mx-10">
@@ -29,7 +30,7 @@ export function ContactForm() {
         </p>
       </div>
       <form
-        action={formAction}
+        // action={formAction}
         className="md:max-w-5xl md:mx-auto mx-10 flex flex-col md:text-xl text-md"
       >
         <label htmlFor="name">Your Name</label>
@@ -70,12 +71,14 @@ export function ContactForm() {
           required
           className="border rounded-2xl px-3 py-2 md:min-h-50 min-h-30 text-black bg-white md:mb-20 mb-10"
         />
-        <ButtonSecondary className={`text-black`} disabled={isPending}>
-          {isPending ? (
+        {/* <ButtonSecondary className={`text-black`} disabled={isPending}> */}
+        <ButtonSecondary className={`text-black`} disabled={true}>
+          {/* {isPending ? (
             <Spinner className="size-7 text-red-600 mx-auto" />
           ) : (
             "Submit"
-          )}
+          )} */}
+          Submit
         </ButtonSecondary>
       </form>
     </div>
