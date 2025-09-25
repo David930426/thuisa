@@ -7,7 +7,7 @@ import { ButtonSecondary } from "@/components/ui/button";
 // import { toast } from "sonner";
 
 export function ContactForm() {
-  const initialState: ComplainState = { ok: false, message: "" };
+  // const initialState: ComplainState = { ok: false, message: "" };
   // const [state, formAction, isPending] = useActionState(
   //   sendSuggest,
   //   initialState
