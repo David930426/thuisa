@@ -22,7 +22,7 @@ export default function Events() {
             <div className="flex">
               <div className="md:mr-5 mr-3">
                 <Image
-                  src="./yingxin1.JPG"
+                  src="/yingxin1.JPG"
                   alt="yingxin1"
                   width={200}
                   height={220}
@@ -47,7 +47,7 @@ export default function Events() {
             <div className="flex">
               <div className="md:mr-5 mr-3">
                 <Image
-                  src="./yingxin2.jpeg"
+                  src="/yingxin2.jpeg"
                   alt="yingxin2"
                   width={200}
                   height={300}
