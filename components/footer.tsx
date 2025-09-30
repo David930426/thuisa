@@ -82,7 +82,7 @@ export default function Footer() {
             reserved.
           </p>
           <p className="text-sm max-xl:text-center">
-            Made by the Double U Team
+            Made by the Gunawan Team
           </p>
         </div>
       </div>

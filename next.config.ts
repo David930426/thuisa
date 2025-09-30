@@ -5,7 +5,10 @@ const repo = "thuisa"; // change this if using GitHub Pages
 
 const nextConfig: NextConfig = {
   output: "export",
-  images: { unoptimized: true }, // <-- important
+  images: {
+    loader: 'custom',
+    loaderFile: './my-loader.ts',
+  },
   basePath: isProd ? `/${repo}` : undefined,
   assetPrefix: isProd ? `/${repo}/` : undefined,
   trailingSlash: true,
