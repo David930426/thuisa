@@ -5,7 +5,7 @@ const isProd = process.env.NODE_ENV === "production";
 const nextConfig: NextConfig = {
   output: "export",
   images: { unoptimized: true }, // <-- important
-  basePath: isProd ? `/thuisa/` : undefined,
+  basePath: isProd ? `/thuisa` : undefined,
   assetPrefix: isProd ? `/thuisa/` : undefined,
   trailingSlash: true,
 };
