@@ -6,17 +6,17 @@ export default function Social() {
     {
       name: "Instagram",
       link: "https://www.instagram.com/thuisa_official",
-      img: "/instagram.png",
+      img: "./instagram.png",
     },
     {
       name: "Tiktok",
       link: "https://www.tiktok.com/@thuisa_official",
-      img: "/tiktok.png",
+      img: "./tiktok.png",
     },
     {
       name: "Line",
       link: "",
-      img: "/line.png",
+      img: "./line.png",
     },
   ];
 
