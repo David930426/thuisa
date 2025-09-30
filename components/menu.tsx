@@ -17,16 +17,18 @@ export default function Menu() {
   const [lastScrollY, setLastScrollY] = useState(0);
   useEffect(() => {
     const controlNavbar = () => {
-      if (typeof window !== "undefined") {
-        if (window.scrollY > lastScrollY) {
-          // scrolling down
-          setShow(false);
-        } else {
-          // scrolling up
-          setShow(true);
-        }
-        setLastScrollY(window.scrollY);
+      const currentYScroll = Math.max(0, window.scrollY);
+
+      if (currentYScroll <= 65) {
+        setShow(true);
+      } else if (window.scrollY > lastScrollY) {
+        // scrolling down
+        setShow(false);
+      } else {
+        // scrolling up
+        setShow(true);
       }
+      setLastScrollY(currentYScroll);
     };
     if (typeof window !== "undefined") {
       window.addEventListener("scroll", controlNavbar);

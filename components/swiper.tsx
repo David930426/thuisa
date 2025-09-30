@@ -28,13 +28,13 @@ export default function SwiperSection() {
               <h1 className="text-white text-2xl md:text-6xl font-bold">
                 Connecting Indonesians at Tunghai
               </h1>
-              <p className="mt-4 text-md md:text-xl text-white/90 max-w-3xl mx-auto">
+              <p className="mt-4 text-md md:text-2xl text-white/90 max-w-3xl mx-auto">
                 Where friendships, culture, and memories come together.
               </p>
-              <div className="md:mt-6 mt-8">
+              <div className="md:mt-15 mt-6">
                 <Link
                   href="/about"
-                  className="bg-red-600 hover:bg-red-700 text-white md:px-6 md:py-3 px-3 py-3 rounded-full transition"
+                  className="bg-red-600 hover:bg-red-700 text-white md:text-xl md:px-7 md:py-4 px-3 py-3 rounded-full transition"
                 >
                   Learn More
                 </Link>
