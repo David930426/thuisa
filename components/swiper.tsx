@@ -25,16 +25,16 @@ export default function SwiperSection() {
             style={{ backgroundImage: "url('/gatherThuisa.png')" }}
           >
             <div className="w-full flex flex-col justify-center items-center bg-black/50 h-full px-6 text-center">
-              <h1 className="text-white text-4xl md:text-6xl font-bold">
+              <h1 className="text-white text-2xl md:text-6xl font-bold">
                 Connecting Indonesians at Tunghai
               </h1>
-              <p className="mt-4 text-lg md:text-xl text-white/90 max-w-3xl mx-auto">
+              <p className="mt-4 text-md md:text-xl text-white/90 max-w-3xl mx-auto">
                 Where friendships, culture, and memories come together.
               </p>
-              <div className="mt-6">
+              <div className="md:mt-6 mt-8">
                 <Link
                   href="/about"
-                  className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-md transition"
+                  className="bg-red-600 hover:bg-red-700 text-white md:px-6 md:py-3 px-3 py-3 rounded-full transition"
                 >
                   Learn More
                 </Link>

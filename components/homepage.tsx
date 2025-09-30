@@ -5,9 +5,9 @@ import { ButtonPrimary, ButtonSecondary } from "./ui/button";
 export default function Homepage() {
   return (
     <>
-      <div className="w-full bg-red-600 text-center mb-20 py-20 text-white">
+      <div className="w-full bg-red-600 text-center mb-20 py-20 text-white px-10">
         <h1 className="text-5xl md:text-9xl font-bold mb-3">THUISA</h1>
-        <p className="text-md md:text-3xl">
+        <p className="text-xl md:text-3xl">
           Tunghai Univeristy Indonesian Student Association
         </p>
       </div>
@@ -31,7 +31,7 @@ export default function Homepage() {
             Taiwan.
           </p>
           <div className="mt-6 md:mt-10 flex">
-            <ButtonPrimary>Join Us</ButtonPrimary>
+            <ButtonPrimary link="https://forms.gle/E8Z1zxySec2gXEs18" target={true}>Join Us</ButtonPrimary>
             <ButtonSecondary link="/events" className="ml-2 md:ml-5">
               Events
             </ButtonSecondary>
@@ -39,19 +39,19 @@ export default function Homepage() {
         </div>
       </div>
       <div className="mt-30 md:mb-10 mb-2 text-center mx-5">
-        <h1 className="text-xl md:text-3xl font-bold mb-4 md:mb-8 text-red-600">
+        <h1 className="text-2xl md:text-3xl font-bold mb-4 md:mb-8 text-red-600">
           What’s Happening Next?
         </h1>
-        <p className="text-sm md:text-xl">
+        <p className="text-md md:text-xl">
           There’s always something to look forward to at THUISA. Here’s what’s
           coming up:
         </p>
       </div>
-      <div className="max-w-7xl md:mx-auto mx-10 py-10 md:py-10 md:shadow rounded-4xl md:px-20 px-5">
+      <div className="max-w-7xl md:mx-auto mx-1 py-10 md:py-10 md:shadow rounded-4xl md:px-20 px-5">
         <div className="md:flex">
           <div className="w-full border-gray border-1 p-5 md:p-6 rounded-4xl shadow mr-10 max-md:mb-5">
-            <h1 className="text-center text-md md:text-2xl font-bold mb-4 md:mb-8 text-red-600">
-              YingXin 1
+            <h1 className="text-center text-xl md:text-2xl font-bold mb-4 md:mb-8 text-red-600">
+              YINGXIN 1
             </h1>
             <div className="flex">
               <Image
@@ -72,8 +72,8 @@ export default function Homepage() {
             </div>
           </div>
           <div className="w-full border-gray border-1 md:p-6 p-5 rounded-4xl shadow mr-10 max-md:mb-5">
-            <h1 className="text-center text-md md:text-2xl font-bold mb-4 md:mb-8 text-red-600">
-              YingXin 2
+            <h1 className="text-center text-xl md:text-2xl font-bold mb-4 md:mb-8 text-red-600">
+              YINGXIN 2
             </h1>
             <div className="flex">
               <Image
@@ -101,8 +101,8 @@ export default function Homepage() {
           <span>VIEW ALL EVENTS</span>
         </Link>
       </div>
-      <div className="w-full bg-red-600 mt-20 pt-20 pb-30">
-        <h1 className="text-xl md:text-5xl font-bold mb-4 md:mb-8 text-white text-center">
+      <div className="w-full bg-red-600 md:mt-20 mt-5 md:pt-20 md:pb-30 py-20">
+        <h1 className="text-4xl md:text-5xl font-bold mb-5 md:mb-8 text-white text-center">
           Follow Us
         </h1>
         <div className="flex justify-center gap-5 md:gap-10">
@@ -114,8 +114,8 @@ export default function Homepage() {
             <Image
               src="./instagram.png"
               alt="instagram"
-              width={50}
-              height={50}
+              width={70}
+              height={70}
               className="md:w-20"
             />
           </Link>
@@ -127,8 +127,8 @@ export default function Homepage() {
             <Image
               src="./tiktok.png"
               alt="tiktok"
-              width={50}
-              height={50}
+              width={70}
+              height={70}
               className="md:w-20"
             />
           </Link>
@@ -140,8 +140,8 @@ export default function Homepage() {
             <Image
               src="./line.png"
               alt="Line"
-              width={50}
-              height={50}
+              width={70}
+              height={70}
               className="md:w-20 rounded-2xl"
             />
           </Link>
