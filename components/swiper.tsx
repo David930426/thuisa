@@ -22,7 +22,7 @@ export default function SwiperSection() {
         <SwiperSlide>
           <div
             className="bg-cover h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] bg-center flex justify-center"
-            style={{ backgroundImage: "url('/gatherThuisa.png')" }}
+            style={{ backgroundImage: "url('./gatherThuisa.png')" }}
           >
             <div className="w-full flex flex-col justify-center items-center bg-black/50 h-full px-6 text-center">
               <h1 className="text-white text-2xl md:text-6xl font-bold">
@@ -45,13 +45,13 @@ export default function SwiperSection() {
         <SwiperSlide>
           <div
             className="bg-cover h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] bg-center flex items-center justify-center"
-            style={{ backgroundImage: "url('/banner2.png')" }}
+            style={{ backgroundImage: "url('./banner2.png')" }}
           ></div>
         </SwiperSlide>
         <SwiperSlide>
           <div
             className="bg-cover h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] bg-center flex items-center justify-center"
-            style={{ backgroundImage: "url('/banner3.png')" }}
+            style={{ backgroundImage: "url('./banner3.png')" }}
           ></div>
         </SwiperSlide>
       </Swiper>

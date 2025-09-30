@@ -294,7 +294,7 @@ export default function Page() {
             </Dialog>
           </div>
         </div>
-        <div className="flex flex-col justify-center items-center max-md ml-5">
+        <div className="flex flex-col justify-center items-center max-md ml-5 max-md:hidden">
           <h1 className="text-2xl md:text-4xl font-bold text-red-600">SEP</h1>
           <p className="text-md md:text-xl text-gray-600">2025</p>
         </div>
