@@ -1,5 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
+import { eventData } from "@/lib/data";
+import EventDialog from "./event-dialog";
 
 export default function Events() {
   const events = [
@@ -21,7 +23,7 @@ export default function Events() {
   return (
     <>
       <Title />
-      <div className="max-w-7xl md:mx-auto mx-1 py-10 md:py-10 md:px-20 px-5 md:shadow rounded-4xl">
+      <div className="max-w-7xl md:mx-auto py-10 md:py-10 md:px-20 px-5 md:shadow rounded-4xl">
         <div className="md:flex">
           {events.map((event) => (
             <div
@@ -41,11 +43,11 @@ export default function Events() {
                     className="rounded-xl md:min-w-50 mr-6 min-w-30"
                   />
                 </div>
-                <div className="md:mt-5 mb-5">
+                <div className="md:mt-5">
                   <p>Date: {event.date ? event.date : "TBD"} </p>
                   <p>Location: {event.location ? event.location : "TBD"}</p>
-                  <p className="md:my-5 mb-3">{event.info}</p>
-                  <LearnMore />
+                  <p className="md:mt-5 md:mb-7">{event.info}</p>
+                  <LearnMore eventName={event.name} />
                 </div>
               </div>
             </div>
@@ -62,18 +64,14 @@ export default function Events() {
   );
 }
 
-export function LearnMore({ className }: { className?: string }) {
+function LearnMore({ eventName }: { eventName: string }) {
+  const selectedData = eventData.find((select) => select.name === eventName);
   return (
-    <Link
-      href={"/events"}
-      className={`text-gray-500 hover:text-gray-600 hover:cursor-pointer hover:underline ${className}`}
-    >
-      Learn More
-    </Link>
+    selectedData && <EventDialog event={selectedData} />
   );
 }
 
-export function Title() {
+function Title() {
   return (
     <div className="mt-30 md:mb-10 mb-2 text-center mx-5">
       <h1 className="text-2xl md:text-3xl font-bold mb-4 md:mb-8 text-red-600">

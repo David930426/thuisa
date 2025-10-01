@@ -4,7 +4,7 @@ import EventDialog from "@/components/event-dialog";
 
 export function Description({ event }: { event: EventData }) {
   return event.img ? (
-    <div className="shadow-md rounded-2xl max-w-6xl mx-5 2xl:mx-auto md:mt-10 mt-5 p-5 md:p-10 flex justify-between">
+    <div className="shadow-md rounded-2xl max-w-6xl mx-2 2xl:mx-auto md:mt-10 mt-5 p-6 md:p-10 flex justify-between">
       <div className="flex md:gap-10 gap-5">
         <Image
           src={`./${event.img}`}
@@ -31,14 +31,14 @@ export function Description({ event }: { event: EventData }) {
       </div>
     </div>
   ) : (
-    <div className="shadow-md rounded-2xl max-w-6xl mx-5 2xl:mx-auto py-5 px-6 md:p-10 flex md:gap-10 gap-5 2xl:mt-15 mt-10 justify-between">
+    <div className="shadow-md rounded-2xl max-w-6xl mx-2 2xl:mx-auto py-5 px-6 md:p-10 flex md:gap-10 gap-5 2xl:mt-15 mt-10 justify-between">
       <div className="flex items-center gap-10">
         <div className="md:w-20 w-5 flex flex-col items-center justify-center">
           <Date day={event.day} month={event.month} year={event.year} />
         </div>
         <div>
           <h1
-            className={`text-red-600 font-bold text-sm md:text-2xl uppercase ${
+            className={`text-red-600 font-bold text-xl md:text-2xl uppercase mb-1 ${
               event.name.length < 11 && "whitespace-nowrap"
             }`}
           >

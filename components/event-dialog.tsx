@@ -21,12 +21,12 @@ export default function EventDialog({ event }: { event: EventData }) {
           View Event
         </ButtonPrimary>
       </DialogTrigger>
-      <DialogContent className="2xl:min-w-4xl max-h-[80vh] overflow-y-auto md:text-xl text-sm">
+      <DialogContent className="2xl:min-w-6xl md:min-w-3xl max-h-[85vh] overflow-y-auto md:text-xl text-md">
         <DialogHeader>
           <DialogTitle className="text-red-600 md:text-3xl uppercase">
             {event.name}
           </DialogTitle>
-          <DialogDescription className="md:text-xl">
+          <DialogDescription className="md:text-xl text-md">
             {event.subInfo ? event.subInfo : "THUISA Event"}
           </DialogDescription>
         </DialogHeader>
@@ -34,13 +34,13 @@ export default function EventDialog({ event }: { event: EventData }) {
           <TabsList className="md:py-6 md:my-3 md:mb-5 my-2">
             <TabsTrigger
               value="about"
-              className="md:text-xl md:p-5 hover:cursor-pointer"
+              className="md:text-xl md:p-5 hover:cursor-pointer text-md"
             >
               About
             </TabsTrigger>
             <TabsTrigger
               value="ticket"
-              className="md:text-xl md:p-5 hover:cursor-pointer"
+              className="md:text-xl md:p-5 hover:cursor-pointer text-md"
               disabled={event.noTicket}
             >
               Ticketing

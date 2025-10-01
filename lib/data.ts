@@ -2,7 +2,7 @@ import { EventData } from "@/lib/types";
 
 export const eventData: EventData[] = [
   {
-    name: "yingxin1",
+    name: "yingxin 1",
     img: "yingxin1.JPG",
     day: undefined,
     month: "september",
