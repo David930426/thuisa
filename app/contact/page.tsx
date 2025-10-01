@@ -16,7 +16,7 @@ export default function Page() {
     {
       q: "How do I join THUISA member?",
       a: "Fill the google form in here, and pay the membership fee to our THUISA ganbu",
-      l: "https://www.google.com/",
+      l: "https://forms.gle/E8Z1zxySec2gXEs18",
     },
     {
       q: "How much for membership fee?",
@@ -107,7 +107,7 @@ export default function Page() {
                 <Link
                   href={`${data.l}`}
                   className="block text-blue-600 hover:text-red-600 md:text-2xl text-md md:pb-5"
-                  target="__blank"
+                  target="_blank"
                 >
                   Click Here
                 </Link>
