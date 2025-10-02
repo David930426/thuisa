@@ -22,9 +22,25 @@ export const memberThuisa: Member[] = [
     role: "advisor",
   },
   {
+    name: "david",
+    role: "advisor",
+  },
+  {
+    name: "grace",
+    role: "advisor",
+  },
+  {
     name: "nicole",
     role: "event director",
     head: true,
+  },
+  {
+    name: "rowen",
+    role: "event director",
+  },
+  {
+    name: "arya",
+    role: "event director",
   },
   {
     name: "mario",
@@ -32,7 +48,19 @@ export const memberThuisa: Member[] = [
     head: true,
   },
   {
-    name: "van",
+    name: "timothy",
+    role: "general affair",
+  },
+  {
+    name: "dave",
+    role: "general affair",
+  },
+  {
+    name: "buddy",
+    role: "general affair",
+  },
+  {
+    name: "vannessa",
     role: "design",
     head: true,
   },
@@ -50,6 +78,18 @@ export const memberThuisa: Member[] = [
     name: "brice",
     role: "docummentation",
     head: true,
+  },
+  {
+    name: "valeri",
+    role: "docummentation",
+  },
+  {
+    name: "gerizim",
+    role: "docummentation",
+  },
+  {
+    name: "russel",
+    role: "docummentation",
   },
   {
     name: "jesslyn",

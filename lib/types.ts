@@ -20,4 +20,4 @@ export type Member = {
   role: string;
   img?: string;
   head?: boolean;
-}
+};
