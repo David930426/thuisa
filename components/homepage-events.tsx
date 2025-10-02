@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { eventData } from "@/lib/data";
+import { eventData } from "@/lib/events-data";
 import { EventDialogContent } from "./event-dialog";
 import { Dialog, DialogTrigger } from "./ui/dialog";
 
@@ -24,7 +24,7 @@ export default function Events() {
   return (
     <>
       <Title />
-      <div className="max-w-7xl md:mx-auto py-10 md:py-10 md:px-20 px-5 md:shadow rounded-4xl">
+      <div className="max-w-7xl md:mx-auto py-10 md:py-10 md:px-20 px-5 md:shadow rounded-4xl group">
         <div className="md:flex">
           {events.map((event) => {
             const selected = eventData.find(
@@ -33,7 +33,7 @@ export default function Events() {
             return selected ? (
               <Dialog key={event.name}>
                 <DialogTrigger asChild>
-                  <div className="w-full border-gray border-1 p-5 md:p-6 rounded-4xl shadow mr-10 max-md:mb-5 hover:shadow-xl hover:cursor-pointer">
+                  <div className="w-full border-gray border-1 p-5 md:p-6 rounded-4xl shadow mr-10 max-md:mb-5 hover:shadow-2xl hover:cursor-pointer group-hover:grayscale-100 hover:grayscale-0 transition-all duration-350 ease-in-out">
                     <h1 className="text-center text-xl md:text-3xl font-bold mb-4 md:mb-8 text-red-600 uppercase">
                       {event.name}
                     </h1>

@@ -9,7 +9,7 @@ import "swiper/css/pagination";
 
 export default function SwiperSection() {
   return (
-    <div className="w-full mt-1">
+    <div className="w-full">
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         spaceBetween={30}

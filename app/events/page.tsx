@@ -1,5 +1,5 @@
 import { Description } from "@/components/event-description";
-import { eventData } from "@/lib/data";
+import { eventData } from "@/lib/events-data";
 
 export default function Page() {
   return (
