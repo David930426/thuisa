@@ -36,7 +36,7 @@ export default function TeamMembers() {
                   key={m.name}
                 >
                   <Image
-                    src={`/members/${m.img ?? "user"}.jpg`}
+                    src={`./members/${m.img ?? "user"}.jpg`}
                     alt={m.name}
                     width={200}
                     height={200}
