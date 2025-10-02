@@ -14,3 +14,10 @@ export type EventData = {
   note?: string;
   noTicket?: boolean;
 };
+
+export type Member = {
+  name: string;
+  role: string;
+  img?: string;
+  head?: boolean;
+}
