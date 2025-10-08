@@ -54,50 +54,6 @@ export default function TeamMembers() {
             </div>
           </section>
         ))}
-
-        {/* {memberThuisa.map((member, index) => {
-          const sameRole =
-            index > 0 && memberThuisa[index - 1].role === member.role;
-          if (!sameRole) {
-            return (
-              <div key={index}>
-                <h2 className="text-2xl md:text-3xl font-semibold mb-4 max-md:text-center capitalize text-center">
-                  {member.role}
-                </h2>
-                <div className="flex flex-wrap md:gap-10 gap-2 mb-12 justify-center">
-                  {memberThuisa.map((m) => {
-                    const sameRole = m.role === member.role;
-                    if (sameRole) {
-                      return (
-                        <div
-                          className="flex flex-col items-center w-auto capitalize"
-                          key={m.name}
-                        >
-                          <Image
-                            src={`/members/${m.img ? m.img : "user"}.jpg`}
-                            alt={m.name}
-                            width={200}
-                            height={200}
-                            className="max-md:h-37 max-md:w-37 object-cover rounded-xl shadow-md"
-                          />
-                          <p className="mt-2 font-semibold text-md md:text-xl">
-                            {m.name}
-                          </p>
-                          <p className="text-sm md:text-md text-gray-500">
-                            {m.head && "Head of "}
-                            {m.role}
-                          </p>
-                        </div>
-                      );
-                    }
-                  })}
-                </div>
-              </div>
-            );
-          } else {
-            return;
-          }
-        })} */}
       </div>
     </div>
   );
