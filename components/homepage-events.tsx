@@ -33,7 +33,7 @@ export default function Events() {
             return selected ? (
               <Dialog key={event.name}>
                 <DialogTrigger asChild>
-                  <div className="w-full border-gray border-1 p-5 md:p-6 rounded-4xl shadow mr-10 max-md:mb-5 hover:shadow-2xl hover:cursor-pointer group-hover:grayscale-100 hover:grayscale-0 transition-all duration-350 ease-in-out">
+                  <div className="w-full border-gray border-1 p-5 md:p-6 rounded-4xl shadow mr-10 max-md:mb-5 hover:shadow-2xl hover:cursor-pointer group-hover:grayscale-100 hover:grayscale-0 transition-all duration-350 ease-in-out hover:scale-110 border-slate-300">
                     <h1 className="text-center text-xl md:text-3xl font-bold mb-4 md:mb-8 text-red-600 uppercase">
                       {event.name}
                     </h1>

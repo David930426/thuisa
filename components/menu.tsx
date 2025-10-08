@@ -52,31 +52,40 @@ export default function Menu() {
 
   return (
     <div
-      className={`fixed top-0 left-0 w-full z-50 transition-transform duration-300 ${
+      className={`fixed top-0 left-0 w-full z-50 transition-transform duration-300 backdrop-blur-sm ${
         show ? "translate-y-0" : "-translate-y-full"
-      } bg-white flex h-20 items-center justify-between px-10 shadow`}
+      } bg-white/50 flex h-20 items-center justify-between px-10 shadow`}
     >
       <Link href={`/`}>
         <Image
-          src={`./logoThuisa.jpeg`}
+          src={`./logoThuisa.PNG`}
           width={70}
           alt="THUISA Logo"
           height={70}
         ></Image>
       </Link>
       <div
-        className={`max-md:hidden flex h-full items-center text-gray-400 font-medium text-sm md:text-base`}
+        className={`max-md:hidden flex h-full items-center text-gray-700 font-medium text-sm md:text-base`}
       >
         {menuLabel.map((item, i) => (
-          <Link
-            key={i}
-            href={item.href}
-            className={`flex items-center lg:px-5 px-3 py-6 hover:text-black hover:border-b-red-600 hover:border-b-4 transition duration-300 ${
-              pathname === item.href && "text-black border-b-4 border-b-red-600"
-            }`}
-          >
-            {item.label}
-          </Link>
+          <div key={i} className="group">
+            <Link
+              href={item.href}
+              // hover:border-b-red-600
+              className={`flex items-center lg:px-5 px-3 py-6 ${
+                pathname === item.href && "text-gray-900"
+              } group-hover: text-gray-900`}
+            >
+              {item.label}
+            </Link>
+            <div
+              className={`${
+                pathname === item.href
+                  ? "w-full min-h-1"
+                  : "group-hover:w-full group-hover:min-h-1 w-0"
+              } bg-red-600 rounded-full transition-all duration-300`}
+            ></div>
+          </div>
         ))}
       </div>
 
@@ -85,7 +94,10 @@ export default function Menu() {
           <DropdownMenuTrigger asChild className="hover:cursor-pointer">
             <Bars3Icon className="size-10 p-2 rounded-md shadow hover:bg-gray-200 transition delay-100" />
           </DropdownMenuTrigger>
-          <DropdownMenuContent className="mr-6 mt-1">
+          <DropdownMenuContent
+            className="mr-6 mt-1 bg-white/70 backdrop-blur-sm border-0
+          "
+          >
             {menuLabel.map((item, index) => (
               <DropdownMenuItem
                 key={index}
