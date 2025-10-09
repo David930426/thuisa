@@ -2,12 +2,12 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import {
-  DropdownMenu,
-  DropdownMenuTrigger,
-  DropdownMenuContent,
-  DropdownMenuItem,
-} from "@/components/ui/dropdown-menu";
+// import {
+//   DropdownMenu,
+//   DropdownMenuTrigger,
+//   DropdownMenuContent,
+//   DropdownMenuItem,
+// } from "@/components/ui/dropdown-menu";
 import { Bars3Icon } from "@heroicons/react/24/outline";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
@@ -48,7 +48,7 @@ export default function Menu() {
     { label: "Contact Us", href: "/contact" },
   ];
 
-  const [open, setOpen] = useState(false);
+  // const [open, setOpen] = useState(false);
 
   return (
     <div
@@ -89,33 +89,28 @@ export default function Menu() {
         ))}
       </div>
 
-      <div className="md:hidden">
-        <DropdownMenu open={open} onOpenChange={setOpen}>
-          <DropdownMenuTrigger asChild className="hover:cursor-pointer">
-            <Bars3Icon className="size-10 p-2 rounded-md shadow hover:bg-gray-200 transition delay-100" />
-          </DropdownMenuTrigger>
-          <DropdownMenuContent
-            className="mr-6 mt-1 bg-white/70 backdrop-blur-sm border-0
-          "
-          >
+      <div className="md:hidden flex justify-end">
+        <button popoverTarget="menu">
+          <Bars3Icon className="size-10 p-2 rounded-md shadow hover:bg-gray-200 transition delay-100" />
+        </button>
+        <div
+          className="fixed left-1/3 h-full w-2/3 bg-red-600 starting:open:left-full transition-all"
+          popover="auto"
+          id="menu"
+        >
+          <h1 className="text-center text-gray-200 font-bold text-3xl my-10">THUISA</h1>
+          <div className="divide-y divide-gray-200 mt-10">
             {menuLabel.map((item, index) => (
-              <DropdownMenuItem
+              <Link
                 key={index}
-                className="hover:cursor-pointer"
-                asChild
-                onSelect={() => setOpen(false)}
+                href={item.href}
+                className="w-full h-20 px-5 text-gray-100 hover:text-gray-700 hover:bg-gray-200 transition duration-300 capitalize text-xl flex items-center"
               >
-                <Link
-                  key={index}
-                  href={item.href}
-                  className="block px-4 py-2 hover:text-gray-400 transition duration-300"
-                >
-                  {item.label}
-                </Link>
-              </DropdownMenuItem>
+                {item.label}
+              </Link>
             ))}
-          </DropdownMenuContent>
-        </DropdownMenu>
+          </div>
+        </div>
       </div>
     </div>
   );
