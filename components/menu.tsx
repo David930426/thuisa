@@ -2,19 +2,14 @@
 
 import Image from "next/image";
 import Link from "next/link";
-// import {
-//   DropdownMenu,
-//   DropdownMenuTrigger,
-//   DropdownMenuContent,
-//   DropdownMenuItem,
-// } from "@/components/ui/dropdown-menu";
-import { Bars3Icon } from "@heroicons/react/24/outline";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 
 export default function Menu() {
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [menu, setMenu] = useState(true);
   useEffect(() => {
     const controlNavbar = () => {
       const currentYScroll = Math.max(0, window.scrollY);
@@ -48,22 +43,52 @@ export default function Menu() {
     { label: "Contact Us", href: "/contact" },
   ];
 
-  // const [open, setOpen] = useState(false);
-
   return (
     <div
       className={`fixed top-0 left-0 w-full z-50 transition-transform duration-300 backdrop-blur-sm ${
         show ? "translate-y-0" : "-translate-y-full"
-      } bg-white/50 flex h-20 items-center justify-between px-10 shadow`}
+      } bg-white/75 flex h-20 items-center justify-between shadow md:px-10`}
     >
-      <Link href={`/`}>
-        <Image
-          src={`./logoThuisa.PNG`}
-          width={70}
-          alt="THUISA Logo"
-          height={70}
-        ></Image>
-      </Link>
+      <div className="flex items-center gap-4 overflow-y-auto">
+        <div className="md:hidden ml-5">
+          <button onClick={() => setMenu(!menu)}>
+            {!menu ? (
+              <Bars3Icon className="size-13 p-3 hover:bg-gray-200 rounded-full transition hover:cursor-pointer duration-300 ease-in-out active:bg-gray-300" />
+            ) : (
+              <XMarkIcon className="size-13 p-3 hover:bg-gray-200 rounded-full transition hover:cursor-pointer duration-200 ease-in-out active:bg-gray-300" />
+            )}
+          </button>
+          <div
+            className={`fixed h-screen w-full top-20 bg-red-600 ${
+              menu ? "left-0" : "-left-full"
+            } transition-all ease-in-out duration-300`}
+          >
+            <h1 className="text-center text-gray-200 font-bold text-3xl my-10">
+              THUISA
+            </h1>
+            <div className="divide-y divide-gray-200 mt-10">
+              {menuLabel.map((item, index) => (
+                <Link
+                  key={index}
+                  href={item.href}
+                  className="w-full h-20 px-5 text-gray-100 hover:text-gray-700 hover:bg-gray-200 transition duration-300 capitalize text-xl flex items-center"
+                  onClick={() => (setMenu(false))}
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+        <Link href={`/`}>
+          <Image
+            src={`./logoThuisa.PNG`}
+            width={70}
+            alt="THUISA Logo"
+            height={70}
+          ></Image>
+        </Link>
+      </div>
       <div
         className={`max-md:hidden flex h-full items-center text-gray-700 font-medium text-sm md:text-base`}
       >
@@ -71,7 +96,6 @@ export default function Menu() {
           <div key={i} className="group">
             <Link
               href={item.href}
-              // hover:border-b-red-600
               className={`flex items-center lg:px-5 px-3 py-6 ${
                 pathname === item.href && "text-gray-900"
               } group-hover: text-gray-900`}
@@ -87,30 +111,6 @@ export default function Menu() {
             ></div>
           </div>
         ))}
-      </div>
-
-      <div className="md:hidden flex justify-end">
-        <button popoverTarget="menu">
-          <Bars3Icon className="size-10 p-2 rounded-md shadow hover:bg-gray-200 transition delay-100" />
-        </button>
-        <div
-          className="fixed left-1/3 h-full w-2/3 bg-red-600 starting:open:left-full transition-all"
-          popover="auto"
-          id="menu"
-        >
-          <h1 className="text-center text-gray-200 font-bold text-3xl my-10">THUISA</h1>
-          <div className="divide-y divide-gray-200 mt-10">
-            {menuLabel.map((item, index) => (
-              <Link
-                key={index}
-                href={item.href}
-                className="w-full h-20 px-5 text-gray-100 hover:text-gray-700 hover:bg-gray-200 transition duration-300 capitalize text-xl flex items-center"
-              >
-                {item.label}
-              </Link>
-            ))}
-          </div>
-        </div>
       </div>
     </div>
   );
