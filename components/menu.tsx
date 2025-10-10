@@ -6,12 +6,14 @@ import { menuLabel } from "@/lib/menu";
 import MenuLogo from "@/components/menu-logo";
 import MenuDesktop from "@/components/menu-section";
 import MenuMobile from "@/components/menu-mobile";
-import { SunIcon } from "@heroicons/react/24/outline";
+import { MoonIcon, SunIcon } from "@heroicons/react/24/outline";
 
 export default function Menu() {
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [menu, setMenu] = useState(false);
+  const [dark, setDark] = useState(false);
+  const pathname = usePathname();
   useEffect(() => {
     const controlNavbar = () => {
       const currentYScroll = Math.max(0, window.scrollY);
@@ -37,7 +39,15 @@ export default function Menu() {
       };
     }
   }, [lastScrollY]);
-  const pathname = usePathname();
+
+  useEffect(() => {
+    const html = document.documentElement;
+    if (dark) {
+      html.classList.add("dark");
+    } else {
+      html.classList.remove("dark");
+    }
+  }, [dark]);
 
   return (
     <div
@@ -56,7 +66,12 @@ export default function Menu() {
       </div>
       <div className="flex items-center">
         <MenuDesktop menuLabel={menuLabel} pathname={pathname} />
-        <SunIcon className="size-13 p-3 mx-3 md:mx-1 hover:bg-gray-200 rounded-full transition hover:cursor-pointer duration-300 ease-in-out active:bg-gray-300" />
+        <button
+          className="size-13 p-3 mx-3 md:mx-1 hover:bg-gray-200 rounded-full transition-all hover:cursor-pointer duration-300 ease-in-out active:bg-gray-300"
+          onClick={() => setDark(!dark)}
+        >
+          {dark ? <SunIcon /> : <MoonIcon />}
+        </button>
       </div>
     </div>
   );
