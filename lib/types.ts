@@ -21,3 +21,9 @@ export type Member = {
   img?: string;
   head?: boolean;
 };
+
+export type MenuType = {
+  name: string;
+  label: string;
+  href: string;
+};
