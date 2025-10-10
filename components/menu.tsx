@@ -9,7 +9,7 @@ import { usePathname } from "next/navigation";
 export default function Menu() {
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
-  const [menu, setMenu] = useState(true);
+  const [menu, setMenu] = useState(false);
   useEffect(() => {
     const controlNavbar = () => {
       const currentYScroll = Math.max(0, window.scrollY);
@@ -19,9 +19,11 @@ export default function Menu() {
       } else if (window.scrollY > lastScrollY) {
         // scrolling down
         setShow(false);
+        setMenu(false);
       } else {
         // scrolling up
         setShow(true);
+        setMenu(false);
       }
       setLastScrollY(currentYScroll);
     };
@@ -59,8 +61,14 @@ export default function Menu() {
             )}
           </button>
           <div
-            className={`fixed h-screen w-full top-20 bg-red-600 ${
-              menu ? "left-0" : "-left-full"
+            className={`fixed top-20 left-0 bg-zinc-900/60 w-screen h-screen transition-all ease-in-out duration-300 ${
+              !menu && "opacity-0"
+            }`}
+            onClick={() => setMenu(false)}
+          ></div>
+          <div
+            className={`fixed h-screen w-1/2 top-20 bg-red-600 ${
+              menu ? "left-0" : "-left-1/2"
             } transition-all ease-in-out duration-300`}
           >
             <h1 className="text-center text-gray-200 font-bold text-3xl my-10">
@@ -72,7 +80,7 @@ export default function Menu() {
                   key={index}
                   href={item.href}
                   className="w-full h-20 px-5 text-gray-100 hover:text-gray-700 hover:bg-gray-200 transition duration-300 capitalize text-xl flex items-center"
-                  onClick={() => (setMenu(false))}
+                  onClick={() => setMenu(false)}
                 >
                   {item.label}
                 </Link>
