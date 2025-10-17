@@ -24,7 +24,7 @@ export default function SwiperSection() {
             className="bg-cover h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] bg-center flex justify-center"
             style={{ backgroundImage: "url('./gatherThuisa.png')" }}
           >
-            <div className="w-full flex flex-col justify-center items-center bg-black/50 h-full px-6 text-center">
+            <div className="w-full flex flex-col justify-center items-center bg-black/50 h-full px-15 md:px-6 text-center">
               <h1 className="text-white text-2xl md:text-6xl font-bold">
                 Connecting Indonesians at Tunghai
               </h1>

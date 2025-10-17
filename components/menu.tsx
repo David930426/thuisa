@@ -53,7 +53,7 @@ export default function Menu() {
     <div
       className={`fixed top-0 left-0 w-full z-50 transition-transform duration-300 backdrop-blur-sm ${
         show ? "translate-y-0" : "-translate-y-full"
-      } bg-white/75 flex h-20 items-center justify-between shadow md:px-10`}
+      } bg-white/75 flex h-20 items-center justify-between shadow md:px-10 dark:bg-zinc-600/75`}
     >
       <div className="flex items-center gap-4">
         <MenuMobile
@@ -67,7 +67,7 @@ export default function Menu() {
       <div className="flex items-center">
         <MenuDesktop menuLabel={menuLabel} pathname={pathname} />
         <button
-          className="size-13 p-3 mx-3 md:mx-1 hover:bg-gray-200 rounded-full transition-all hover:cursor-pointer duration-300 ease-in-out active:bg-gray-300"
+          className="size-13 p-3 mx-3 md:mx-1 hover:bg-gray-200 rounded-full transition-all hover:cursor-pointer duration-300 ease-in-out active:bg-gray-300 dark:hover:bg-zinc-500 dark:active:bg-zinc-600"
           onClick={() => setDark(!dark)}
         >
           {dark ? <SunIcon /> : <MoonIcon />}

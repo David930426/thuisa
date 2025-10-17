@@ -17,7 +17,7 @@ export function ButtonPrimary({
     return (
       <Link
         href={disabled ? "#" : link}
-        className={`text-white whitespace-nowrap shadow bg-red-600 hover:bg-red-700 p-3 rounded-full text-sm md:text-xl hover:cursor-pointer transition-colors ${className}`}
+        className={`text-white whitespace-nowrap shadow bg-red-600 hover:bg-red-700 p-3 rounded-full text-sm md:text-xl hover:cursor-pointer transition-colors dark:shadow-zinc-500 ${className}`}
         target={target ? "_blank" : ""}
       >
         {children}
@@ -28,7 +28,7 @@ export function ButtonPrimary({
       <button
         type="submit"
         disabled={disabled}
-        className={`text-white whitespace-nowrap shadow bg-red-600 hover:bg-red-700 p-3 rounded-full text-sm md:text-xl hover:cursor-pointer transition-colors ${className}`}
+        className={`text-white whitespace-nowrap shadow bg-red-600 hover:bg-red-700 p-3 rounded-full text-sm md:text-xl hover:cursor-pointer transition-colors dark:shodow-zinc-500 ${className}`}
       >
         {children}
       </button>
@@ -53,7 +53,7 @@ export function ButtonSecondary({
     return (
       <Link
         href={disabled ? "#" : link}
-        className={`whitespace-nowrap shadow bg-white hover:bg-gray-100 p-3 rounded-full text-sm md:text-xl hover:cursor-pointer transition-colors ${className}`}
+        className={`whitespace-nowrap shadow bg-white hover:bg-gray-100 p-3 rounded-full text-sm md:text-xl hover:cursor-pointer transition-colors dark:shadow-zinc-200 dark:text-black ${className}`}
         target={target ? "_blank" : ""}
       >
         {children}
@@ -64,7 +64,7 @@ export function ButtonSecondary({
       <button
         type="submit"
         disabled={disabled}
-        className={`whitespace-nowrap shadow bg-white hover:bg-gray-100 p-3 rounded-full text-sm md:text-xl hover:cursor-pointer transition-colors ${className}`}
+        className={`whitespace-nowrap shadow bg-white hover:bg-gray-100 p-3 rounded-full text-sm md:text-xl hover:cursor-pointer transition-colors dark:shadow-zinc-200 dark:text-black ${className}`}
       >
         {children}
       </button>
