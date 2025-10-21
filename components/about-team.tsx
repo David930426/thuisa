@@ -19,13 +19,13 @@ export default function TeamMembers() {
   }, []);
   return (
     <div className="max-w-5xl md:mx-auto mt-20">
-      <h1 className="text-3xl md:text-4xl text-red-600 font-bold mb-6 md:mb-8 md:mx-10 max-md:text-center">
+      <h1 className="text-3xl md:text-4xl text-red-600 dark:text-neutral-100 font-bold mb-6 md:mb-8 md:mx-10 max-md:text-center">
         Our teams
       </h1>
       <div className="max-w-5xl md:mx-auto max-sm:mx-4">
         {[...groupedByRole.entries()].map(([role, members]) => (
           <section key={role}>
-            <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-center capitalize">
+            <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-center capitalize dark:text-neutral-200">
               {role}
             </h2>
 
@@ -45,7 +45,7 @@ export default function TeamMembers() {
                   <p className="mt-2 font-semibold text-md md:text-xl">
                     {m.name}
                   </p>
-                  <p className="text-sm md:text-md text-gray-500">
+                  <p className="text-sm md:text-md text-neutral-500  dark:text-neutral-400">
                     {m.head && "Head of "}
                     {m.role}
                   </p>

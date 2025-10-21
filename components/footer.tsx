@@ -35,7 +35,7 @@ export default function Footer() {
         <div>
           <div className="flex flex-warp gap-4 mb-7 max-xl:justify-center max-xl:items-center">
             <Image
-              src="./android-chrome-192x192.png"
+              src="./logoDarkThuisa.PNG"
               alt="thuisaLogo"
               width={60}
               height={60}
