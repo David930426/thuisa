@@ -14,10 +14,10 @@ export function Description({ event }: { event: EventData }) {
           className="rounded-xl md:min-w-50 min-w-20"
         />
         <div>
-          <h1 className="text-red-600 text-xl md:text-2xl font-bold max-md:mt-5 whitespace-nowrap uppercase">
+          <h1 className="text-red-600 dark:text-neutral-100 text-xl md:text-2xl font-bold max-md:mt-5 whitespace-nowrap uppercase">
             {event.name}
           </h1>
-          <h3 className="text-gray-400 md:text-xl text-md md:mb-5 mb-2">
+          <h3 className="text-neutral-400 dark:text-neutral-300 md:text-xl text-md md:mb-5 mb-2">
             {event.subInfo}
           </h3>
           <p className="md:text-xl text-md md:my-10 mb-5 max-md:hidden">
@@ -38,13 +38,13 @@ export function Description({ event }: { event: EventData }) {
         </div>
         <div>
           <h1
-            className={`text-red-600 font-bold text-xl md:text-2xl uppercase mb-1 ${
+            className={`text-red-600 dark:text-neutral-100 font-bold text-xl md:text-2xl uppercase mb-1 ${
               event.name.length < 11 && "whitespace-nowrap"
             }`}
           >
             {event.name}
           </h1>
-          <p className="text-gray-400 md:text-xl text-sm md:mb-5 mb-2">
+          <p className="text-neutral-400 dark:text-neutral-300 md:text-xl text-sm md:mb-5 mb-2">
             {event.subInfo ? event.subInfo : "THUISA Event"}
           </p>
         </div>
@@ -65,15 +65,15 @@ function Date({
 }) {
   return (
     <>
-      <h1 className="text-3xl md:text-5xl font-bold text-red-600">{day}</h1>
+      <h1 className="text-3xl md:text-5xl font-bold text-red-600 dark:text-neutral-100">{day}</h1>
       <h1
-        className={`text-red-600 font-bold uppercase ${
+        className={`text-red-600 dark:text-neutral-200 font-bold uppercase ${
           !day ? "text-2xl md:text-4xl" : "text-md md:text-2xl"
         }`}
       >
         {month.length > 3 ? month.slice(0, 3) : month}
       </h1>
-      <h1 className="text-md md:text-xl text-gray-600">{year}</h1>
+      <h1 className="text-md md:text-xl text-neutral-600 dark:text-neutral-300">{year}</h1>
     </>
   );
 }

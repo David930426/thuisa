@@ -1,6 +1,6 @@
 export function Title() {
   return (
-    <div className="w-full text-white bg-red-600 text-center py-15 md:py-25">
+    <div className="w-full text-neutral-100 bg-red-600 text-center py-15 md:py-25">
       <h1 className="text-4xl md:text-7xl font-bold pb-2 md:pb-4">
         Contact THUISA
       </h1>
@@ -16,25 +16,25 @@ export function Information() {
   return (
     <div className="md:max-w-5xl mx-10 md:mx-auto mt-10 md:mt-20 md:flex gap-10 text-center mb-10">
       <div className="md:w-1/2 px-10 md:pb-20 pb-10 pt-10 rounded-3xl shadow-md">
-        <h1 className="text-red-600 md:text-5xl text-3xl font-bold mb-10">
+        <h1 className="text-red-600 dark:text-neutral-100 md:text-5xl text-3xl font-bold mb-10">
           Contacts
         </h1>
-        <h3 className="text-red-600 md:text-2xl text-xl mb-1">
+        <h3 className="text-red-600 dark:text-neutral-100 md:text-2xl text-xl mb-1">
           Contact Our Line:
         </h3>
-        <p className="mb-5 md:mb-8 md:text-xl text-md">lineId thuisa</p>
-        <h3 className="text-red-600 md:text-2xl text-xl mb-1">
+        <p className="mb-5 md:mb-8 md:text-xl text-md dark:text-neutral-300">lineId thuisa</p>
+        <h3 className="text-red-600 dark:text-neutral-100 md:text-2xl text-xl mb-1">
           Find Our Latest Update:
         </h3>
-        <p className="md:text-xl text-md">Tiktok: @thuisa_official</p>
-        <p className="mb-5 md:mb-8 md:text-xl text-md">
+        <p className="md:text-xl text-md dark:text-neutral-300">Tiktok: @thuisa_official</p>
+        <p className="mb-5 md:mb-8 md:text-xl text-md dark:text-neutral-300">
           Instagram: thuisa_official
         </p>
-        <h3 className="text-red-600 md:text-2xl text-xl mb-1">Email Us: </h3>
-        <p className="md:text-xl text-md">thuisa2025@gmail.com</p>
+        <h3 className="text-red-600 dark:text-neutral-100 md:text-2xl text-xl mb-1">Email Us: </h3>
+        <p className="md:text-xl text-md dark:text-neutral-300">thuisa2025@gmail.com</p>
       </div>
       <div className="md:w-1/2 rounded-3xl shadow-md px-10 md:pb-20 pb-10 pt-10">
-        <h1 className="text-red-600 md:text-5xl text-3xl font-bold mb-7">
+        <h1 className="text-red-600 dark:text-neutral-100 md:text-5xl text-3xl font-bold mb-7">
           Our Location:
         </h1>
         <div>

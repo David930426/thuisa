@@ -14,14 +14,14 @@ export default function Page() {
     <div className="min-h-screen">
       <Title />
       <Information />
-      <h1 className="text-4xl md:text-7xl font-bold pb-5 md:pb-10 text-center text-red-600 md:mt-30 mt-20">
+      <h1 className="text-4xl md:text-7xl font-bold pb-5 md:pb-10 text-center text-red-600 dark:text-neutral-100 md:mt-30 mt-20">
         Ask THUISA
       </h1>
       <Accordion
         type="single"
         collapsible
         defaultValue="question-0"
-        className="max-w-5xl mx-10 md:mx-auto mb-20"
+        className="max-w-5xl mx-10 md:mx-auto mb-20 dark:text-neutral-100"
       >
         {questionData.map((data, index) => (
           <AccordionItem key={index} value={`question-${index}`}>
@@ -29,7 +29,7 @@ export default function Page() {
               <p className="flex md:text-3xl text-xl md:py-5 py-1">{data.q}</p>
             </AccordionTrigger>
             <AccordionContent>
-              <p className="flex md:text-2xl text-md md:pb-10 pb-5">{data.a}</p>
+              <p className="flex md:text-2xl text-md md:pb-10 pb-5 dark:text-neutral-300">{data.a}</p>
               {data.l ? (
                 <Link
                   href={`${data.l}`}

@@ -30,10 +30,10 @@ export function EventDialogContent({ event }: { event: EventData }) {
   return (
     <DialogContent className="2xl:min-w-6xl md:min-w-3xl max-h-[85vh] overflow-y-auto md:text-xl text-md">
       <DialogHeader>
-        <DialogTitle className="text-red-600 md:text-3xl uppercase">
+        <DialogTitle className="text-red-600 dark:text-neutral-100 md:text-3xl uppercase">
           {event.name}
         </DialogTitle>
-        <DialogDescription className="md:text-xl text-md">
+        <DialogDescription className="md:text-xl text-md dark:text-neutral-400">
           {event.subInfo ? event.subInfo : "THUISA Event"}
         </DialogDescription>
       </DialogHeader>
