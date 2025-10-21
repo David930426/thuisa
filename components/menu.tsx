@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { menuLabel } from "@/lib/menu";
 import MenuLogo from "@/components/menu-logo";
@@ -9,18 +9,35 @@ import MenuMobile from "@/components/menu-mobile";
 import { MoonIcon, SunIcon } from "@heroicons/react/24/outline";
 
 export default function Menu() {
+  const [mounted, setMounted] = useState(false);
   const [show, setShow] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
+  const lastScrollY = useRef(0);
   const [menu, setMenu] = useState(false);
   const [dark, setDark] = useState(false);
   const pathname = usePathname();
+
   useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!mounted) return;
+    const html = document.documentElement;
+    html.classList.toggle("dark", dark);
+    try {
+      localStorage.setItem("theme", dark ? "dark" : "light");
+    } catch {}
+  }, [dark, mounted]);
+
+  useEffect(() => {
+    if (!mounted) return;
+
     const controlNavbar = () => {
       const currentYScroll = Math.max(0, window.scrollY);
 
       if (currentYScroll <= 65) {
         setShow(true);
-      } else if (window.scrollY > lastScrollY) {
+      } else if (currentYScroll > lastScrollY.current) {
         // scrolling down
         setShow(false);
         setMenu(false);
@@ -29,31 +46,21 @@ export default function Menu() {
         setShow(true);
         setMenu(false);
       }
-      setLastScrollY(currentYScroll);
+      lastScrollY.current = currentYScroll;
     };
-    if (typeof window !== "undefined") {
-      window.addEventListener("scroll", controlNavbar);
 
-      return () => {
-        window.removeEventListener("scroll", controlNavbar);
-      };
-    }
-  }, [lastScrollY]);
+    window.addEventListener("scroll", controlNavbar, { passive: true });
 
-  useEffect(() => {
-    const html = document.documentElement;
-    if (dark) {
-      html.classList.add("dark");
-    } else {
-      html.classList.remove("dark");
-    }
-  }, [dark]);
+    return () => {
+      window.removeEventListener("scroll", controlNavbar);
+    };
+  }, [mounted]);
 
   return (
     <div
-      className={`fixed top-0 left-0 w-full z-50 transition-transform duration-300 backdrop-blur-sm ${
+      className={`fixed top-0 left-0 w-full z-50 transition-transform duration-300 ${
         show ? "translate-y-0" : "-translate-y-full"
-      } bg-white/75 flex h-20 items-center justify-between shadow md:px-10 dark:bg-zinc-600/75`}
+      } bg-neutral-100 flex h-20 items-center justify-between shadow-md md:px-10 dark:bg-neutral-900`}
     >
       <div className="flex items-center gap-4">
         <MenuMobile

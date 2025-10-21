@@ -18,23 +18,23 @@ export default function MenuMobile({
     <div className="md:hidden ml-5">
       <button onClick={() => setMenu(!menu)}>
         {!menu ? (
-          <Bars3Icon className="size-13 p-3 hover:bg-gray-200 rounded-full transition hover:cursor-pointer duration-300 ease-in-out active:bg-gray-300 dark:hover:bg-zinc-500 dark:active:bg-zinc-600" />
+          <Bars3Icon className="size-13 p-3 hover:bg-neutral-200 rounded-full transition hover:cursor-pointer duration-300 ease-in-out active:bg-neutral-300 dark:hover:bg-neutral-500 dark:active:bg-neutral-600" />
         ) : (
-          <XMarkIcon className="size-13 p-3 hover:bg-gray-200 rounded-full transition hover:cursor-pointer duration-200 ease-in-out active:bg-gray-300 dark:hover:bg-zinc-500 dark:active:bg-zinc-600" />
+          <XMarkIcon className="size-13 p-3 hover:bg-neutral-200 rounded-full transition hover:cursor-pointer duration-200 ease-in-out active:bg-neutral-300 dark:hover:bg-neutral-500 dark:active:bg-neutral-600" />
         )}
       </button>
       <div
-        className={`fixed top-20 left-0 bg-zinc-900/60 w-screen h-screen transition-all ease-in-out duration-300 ${
-          !menu && "opacity-0"
+        className={`fixed top-20 left-0 bg-neutral-900/60 w-screen h-screen transition-all ease-in-out duration-300 ${
+          !menu && "hidden"
         }`}
         onClick={() => setMenu(false)}
       ></div>
       <div
-        className={`fixed h-screen w-1/2 top-20 backdrop-blur-sm bg-white/75 ${
+        className={`fixed h-screen w-1/2 top-20 bg-neutral-100 ${
           menu ? "left-0" : "-left-1/2"
-        } transition-all ease-in-out duration-300  dark:bg-zinc-600/75 `}
+        } transition-all ease-in-out duration-300  dark:bg-neutral-900 shadow-2xl`}
       >
-        <h1 className="text-center text-red-600 font-bold text-3xl my-10 dark:text-zinc-100">
+        <h1 className="text-center text-red-600 font-bold text-3xl my-10 dark:text-neutral-100">
           THUISA
         </h1>
         <div className="mt-10">
@@ -45,8 +45,10 @@ export default function MenuMobile({
               onClick={() => setMenu(false)}
             >
               <div
-                className={`w-full h-15 px-5 rounded-xl hover:text-zinc-100 hover:bg-gradient-to-r hover:from-zinc-400 hover:to-zinc-300 dark:hover:from-red-500 dark:hover:to-red-600 transition-all duration-300 capitalize text-xl flex items-center mb-1 ${
-                  pathname === item.href ? "text-zinc-100 bg-gradient-to-r from-zinc-400 to-zinc-300 dark:from-red-500 dark:to-red-600" : "text-red-500 dark:text-zinc-100"
+                className={`w-full h-15 px-5 rounded-xl hover:text-zinc-100 hover:bg-gradient-to-r hover:from-red-500 hover:to-red-600 transition-all duration-300 capitalize text-xl flex items-center mb-1 ${
+                  pathname === item.href
+                    ? "text-zinc-100 bg-gradient-to-r from-red-500 to-red-600"
+                    : "text-red-500 dark:text-zinc-100"
                 }`}
               >
                 <MenuIcon name={item.name} className="size-7 mr-3" />
