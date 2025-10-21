@@ -1,11 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
 
-export default function MenuLogo() {
+export default function MenuLogo({ dark }: { dark: boolean }) {
   return (
     <Link href={`/`}>
       <Image
-        src={`./logoThuisa.PNG`}
+        src={!dark ? "./logoThuisa.PNG" : "./logoDarkThuisa.PNG"}
         width={70}
         alt="THUISA Logo"
         height={70}

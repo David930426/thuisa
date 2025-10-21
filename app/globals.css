@@ -47,11 +47,6 @@ body {
   font-family: var(--font-sans, Arial, Helvetica, sans-serif);
 }
 
-footer {
-  background: black;
-  color: white;
-}
-
 .swiper-pagination-bullet {
   background-color: #919191 !important;
 }

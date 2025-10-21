@@ -69,7 +69,7 @@ export default function Menu() {
           menu={menu}
           setMenu={setMenu}
         />
-        <MenuLogo />
+        <MenuLogo dark={dark} />
       </div>
       <div className="flex items-center">
         <MenuDesktop menuLabel={menuLabel} pathname={pathname} />

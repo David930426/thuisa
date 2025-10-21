@@ -22,7 +22,7 @@ export default function Intro() {
             height={175}
             className="rounded-md md:hidden"
           />
-          <h1 className="text-xl md:text-3xl font-bold mb-4 md:mb-8 text-red-600">
+          <h1 className="text-2xl md:text-3xl font-bold mb-4 md:mb-8 text-red-600 dark:text-neutral-100">
             Your Home Away from Home at Tunghai University
           </h1>
         </div>

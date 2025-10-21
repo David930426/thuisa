@@ -34,7 +34,7 @@ export default function Events() {
               <Dialog key={event.name}>
                 <DialogTrigger asChild>
                   <div className="w-full border-gray border-1 p-5 md:p-6 rounded-4xl shadow mr-10 max-md:mb-5 hover:shadow-2xl hover:cursor-pointer group-hover:grayscale-100 hover:grayscale-0 transition-all duration-350 ease-in-out hover:scale-110 border-slate-300">
-                    <h1 className="text-center text-xl md:text-3xl font-bold mb-4 md:mb-8 text-red-600 uppercase">
+                    <h1 className="text-center text-xl md:text-3xl font-bold mb-4 md:mb-8 text-red-600 uppercase dark:text-neutral-100">
                       {event.name}
                     </h1>
                     <div className="flex">
@@ -76,7 +76,7 @@ export default function Events() {
 function Title() {
   return (
     <div className="mt-30 md:mb-10 mb-2 text-center mx-5">
-      <h1 className="text-2xl md:text-3xl font-bold mb-4 md:mb-8 text-red-600">
+      <h1 className="text-2xl md:text-3xl font-bold mb-4 md:mb-8 text-red-600 dark:text-neutral-100">
         What’s Happening Next?
       </h1>
       <p className="text-md md:text-xl">
